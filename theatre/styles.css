@@ -111,7 +111,7 @@ body{
     height:200px;
     transform-style:preserve-3d;
     margin:15;
-    animation:rotate 35s linear infinite;
+    animation:rotate 60s linear infinite;
   }
   
   @keyframes rotate{
