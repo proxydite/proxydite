@@ -25,7 +25,7 @@ jobs:
 
     - name: Fetch and convert APOD image
       env:
-        NASA_API_KEY: ${{agqMH8aFAbp14TaJFXMX8rHmoJ2sZeghddN6E2At}}
+        NASA_API_KEY: ${{ secrets.NASA_API_KEY }}
       run: |
         python fetch_apod.py
 
