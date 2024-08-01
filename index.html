@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,43 +18,64 @@
             align-items: center;
             height: 100vh;
         }
+
         #terminal {
             border: 2px solid #0F0;
             padding: 20px;
             max-width: 800px;
             text-align: center;
         }
-        h2 {
+
+        h1 {
             font-size: 2em;
             margin-bottom: 1.5em;
         }
+
         p {
             line-height: 1.5em;
             margin: 0.5em 0;
         }
-        pre {
-            text-align: left;
-            white-space: pre-wrap;
+
+        button {
+            background-color: #0F0;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+            margin-top: 20px;
+            transition: background-color 0.3s;
         }
+
+        button:hover {
+            background-color: #00A000;
+        }
+
+        a {
+            color: #0F0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
+
 <body>
     <div id="terminal">
         <h2>proxydite</h2>
-        <pre id="ascii-art"></pre>
+        <p>(noun) <br> An individual appointed or authorized to act on behalf of another. <br><br> (verb) <br>Preparing oneself or one's work for presentation or use through rehearsal, practice, or fine-tuning.</p>
         <button onclick="enterSite()">ENTER</button>
     </div>
     <script>
-        async function fetchAsciiArt() {
-            const response = await fetch('ascii_art.txt');
-            const text = await response.text();
-            document.getElementById('ascii-art').textContent = text;
-        }
-        fetchAsciiArt();
-        
         function enterSite() {
-            window.location.href = "../home/home.html";
+            // Linking to home.html in the same directory
+            window.location.href = "../home/home.html"; 
         }
     </script>
+    
 </body>
+
 </html>
