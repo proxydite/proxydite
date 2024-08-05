@@ -1,3 +1,4 @@
+/* Base and layout styles */
 body {
     background-color: black;
     color: green;
@@ -5,8 +6,8 @@ body {
     padding: 3% 10%;
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
     align-items: start;
-    height: 100vh;
 }
 
 header {
@@ -14,20 +15,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 2rem;
 }
 
 h1 {
     margin: 0;
-}
-
-h1 a {
-    color: green;
-    text-decoration: none;
-}
-
-h1 a:hover {
-    text-decoration: underline;
 }
 
 ul.menu {
@@ -51,46 +42,27 @@ ul.menu a:hover {
 }
 
 .content {
+    flex: 1; /* Takes up all available space pushing footer to the bottom */
     display: flex;
-    flex: 1;
 }
 
 .text-section {
-    width: 80%;
-    flex-grow: 1;
-    padding-right: 1rem;
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-top: 50px; /* This provides space from the top of the page */
+}
+
+.clear {
+    clear: both; /* This clears the float, making the following content appear below */
 }
 
 footer {
+    background-color: #1a1a1a; /* Darker color for distinction */
+    color: green; /* Ensuring the text is visible against the darker footer */
     text-align: left;
-    padding: 1rem 0;
-    background-color: black;
-    color: green;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-
-.links li {
-    margin-bottom: 20px;
-}
-.list-green {
-  color: #008000; /* Green */
-}
-
-.list-green a {
-  color: inherit;
-}
-
-
-/* Mobile adjustments */
-@media screen and (max-width: 767px) {
-    header {
-        flex-direction: column;
-        align-items: start;
-        justify-content: normal;
-    }
-
-    ul.menu {
-        margin-top: 1rem;
-    }
+    padding: 10px 0;
 }
