@@ -1,0 +1,117 @@
+body {
+    background-color: black;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 3% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0rem;
+}
+
+h1 {
+    margin: 0;
+}
+
+h1 a {
+    color: green; /* This ensures the color remains consistent with the rest of the title */
+    text-decoration: none; /* This removes the underline */
+}
+
+h1 a:hover {
+    text-decoration: underline; /* This adds the underline on hover, but it's optional */
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+ul.menu li {
+    margin: 0;
+}
+
+ul.menu a {
+    color: green;
+    text-decoration: none;
+}
+
+ul.menu a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.text-section {
+    text-align: left;
+    width: 100%;
+}
+
+.ascii-section img {
+    width: 100%;
+    max-width: 450px;
+    display: block;
+    margin: 0;
+}
+
+.right-aligned-image {
+    width: 100%; 
+    max-width: 450px;
+    display: block; 
+    margin: 0;
+}
+
+.text-section, .ascii-section {
+    width: 100%; 
+    padding: 0;
+    box-sizing: border-box; /* To ensure that padding doesn't add to the overall width */
+}
+
+/* Media query for screens wider than 768px */
+@media screen and (min-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: row;  /* Explicitly set the flex direction to row */
+        justify-content: space-between;
+    }
+
+    .text-section {
+        flex: 1; /* This allows the text section to grow and take up available space */
+        padding-right: 1rem;  /* Some padding to prevent text from touching the image */
+        max-width: 50%;  /* Limits width to half of the content area */
+    }
+
+    .ascii-section {
+        flex-basis: 45%;  /* This sets a base width for the image section */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 767px) {
+    header {
+        flex-direction: column;
+        align-items: start;
+        justify-content: normal;
+    }
+
+    ul.menu {
+        margin-top: 1rem;
+    }
+}
