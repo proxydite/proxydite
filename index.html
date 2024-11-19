@@ -24,16 +24,15 @@
             padding: 20px;
             max-width: 800px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        h1 {
-            font-size: 2em;
-            margin-bottom: 1.5em;
-        }
-
-        p {
-            line-height: 1.5em;
-            margin: 0.5em 0;
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
         }
 
         button {
@@ -43,39 +42,26 @@
             cursor: pointer;
             font-family: 'Courier New', monospace;
             font-size: 1em;
-            margin-top: 20px;
             transition: background-color 0.3s;
         }
 
         button:hover {
             background-color: #00A000;
         }
-
-        a {
-            color: #0F0;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
     </style>
 </head>
 
 <body>
     <div id="terminal">
-        <h2>proxydite</h2>
-        <p>(noun) <br> An individual appointed or authorized to act on behalf of another. <br><br> (verb) <br>Preparing oneself or one's work for presentation or use through rehearsal, practice, or fine-tuning.</p>
+        <img src="fractal.jpg" alt="Fractal Image">
         <button onclick="enterSite()">ENTER</button>
     </div>
     <script>
         function enterSite() {
             // Linking to home.html in the same directory
-            window.location.href = "../home/home.html"; 
+            window.location.href = "../home/home.html";
         }
     </script>
-    
 </body>
 
 </html>
