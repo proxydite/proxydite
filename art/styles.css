@@ -108,17 +108,17 @@ ul.menu a:hover {
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    grid-auto-rows: minmax(100px, auto); /* Set row heights */
     gap: 20px; /* Space between items */
-    justify-items: center; /* Center items within their grid cells */
-    margin-bottom: 20px; /* Adds space below the gallery */
 }
+
 
 
 .gallery-item {
     text-align: center;
-    text-decoration: none;
-    color: green;
+    align-self: start; /* Aligns items to the top */
 }
+
 
 .gallery-item img {
     width: 100%; /* Make images responsive */
