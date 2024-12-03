@@ -1,0 +1,68 @@
+/* Base and layout styles */
+body {
+    background-color: black;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 3% 10%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+    align-items: start;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul.menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+ul.menu li {
+    margin: 0;
+}
+
+ul.menu a {
+    color: green;
+    text-decoration: none;
+}
+
+ul.menu a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    flex: 1; /* Takes up all available space pushing footer to the bottom */
+    display: flex;
+}
+
+.text-section {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    margin-top: 50px; /* This provides space from the top of the page */
+}
+
+.clear {
+    clear: both; /* This clears the float, making the following content appear below */
+}
+
+footer {
+    background-color: #1a1a1a; /* Darker color for distinction */
+    color: green; /* Ensuring the text is visible against the darker footer */
+    text-align: left;
+    padding: 10px 0;
+}

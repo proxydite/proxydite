@@ -1,0 +1,63 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proxydite</title>
+    <style>
+        body {
+            background-color: #000;
+            font-family: 'Courier New', monospace;
+            color: #0F0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #terminal {
+            border: 2px solid #0F0;
+            padding: 20px;
+            max-width: 800px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #0F0;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #00A000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="terminal">
+        <img src="fractal.jpg" alt="Fractal Image">
+        <button onclick="enterSite()">ENTER</button>
+    </div>
+    <script>
+        function enterSite() {
+            // Linking to home.html in the same directory
+            window.location.href = "../home/home.html";
+        }
+    </script>
+</body>
+</html>
