@@ -198,9 +198,18 @@ footer {
 }
 
 /* General Mobile Adjustments */
+
 @media screen and (max-width: 767px) {
-    /* Adjust gallery items */
-@media screen and (max-width: 767px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start; /* Aligns elements to the start */
+    }
+
+    ul.menu {
+        margin-top: 1rem; /* Adds space between the title and menu */
+    }
+
     .gallery-container {
         grid-template-columns: repeat(2, 1fr); /* Use 2 items per row for mobile */
         gap: 10px; /* Reduce spacing */
