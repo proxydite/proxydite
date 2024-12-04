@@ -61,6 +61,18 @@ ul.menu a:hover {
     padding-right: 1rem;
 }
 
+.bandcamp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Adjust spacing between items */
+    justify-items: center; /* Center the iframes */
+}
+
+.bandcamp-grid iframe {
+    max-width: 100%; /* Ensure responsiveness */
+}
+
+
 footer {
     text-align: left;
     padding: 1rem 0;

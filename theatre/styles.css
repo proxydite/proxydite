@@ -51,6 +51,11 @@ ul.menu a:hover {
     text-decoration: underline;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
   
   .gallery-and-text {
     width: 100%; /* Full width of the page */
@@ -70,8 +75,6 @@ ul.menu a:hover {
     line-height: 1.5;
     color: green;
 }
-
-
   
   
 .gallery-container {
@@ -167,8 +170,17 @@ footer {
 
 /* General Mobile Adjustments */
 @media screen and (max-width: 767px) {
-    /* Adjust gallery items */
-@media screen and (max-width: 767px) {
+	
+    header {
+        flex-direction: column;
+        align-items: flex-start; /* Aligns elements to the start */
+    }
+
+    ul.menu {
+        margin-top: 1rem; /* Adds space between the title and menu */
+    }
+}
+
     .gallery-container {
         grid-template-columns: repeat(2, 1fr); /* Use 2 items per row for mobile */
         gap: 10px; /* Reduce spacing */
