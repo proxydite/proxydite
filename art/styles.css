@@ -133,6 +133,14 @@ ul.menu a:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
+.project-description {
+    color: white; /* Matches the modal text color */
+    font-size: 1.2rem; /* Adjust size for readability */
+    line-height: 1.5; /* Improve text spacing */
+    margin-bottom: 20px; /* Space between text and images */
+    text-align: center; /* Center align for consistency */
+}
+
 
 /* Modal */
 .modal {
@@ -224,6 +232,13 @@ footer {
     .gallery-item p {
         font-size: 1rem; /* Adjust font size for captions */
     }
+	
+	{
+    .project-description {
+        font-size: 1rem; /* Adjust text size for smaller screens */
+        margin-bottom: 15px; /* Reduce spacing */
+    }
+}
 
     /* Modal Images */
     .modal-content img {
