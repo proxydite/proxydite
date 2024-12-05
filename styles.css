@@ -60,6 +60,45 @@ ul.menu a:hover {
     clear: both; /* This clears the float, making the following content appear below */
 }
 
+/* Styling the terminal container */
+#terminal {
+    border: 2px solid #0F0; /* Green border for the box */
+    padding: 0; /* Remove extra padding */
+    max-width: 640px; /* Match the video width */
+    margin: auto; /* Center the terminal box horizontally */
+    text-align: center; /* Center align the content */
+    display: flex;
+    flex-direction: column; /* Stack video and button */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Includes padding in the dimensions */
+}
+
+/* Styling the video */
+video {
+    width: 100%; /* Match the terminal box width */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 0; /* Remove any extra margin */
+}
+
+/* Styling the button */
+button {
+    margin-top: 10px; /* Space between video and button */
+    background-color: #0F0; /* Green background */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #00A000; /* Darker green on hover */
+}
+
+
 footer {
     background-color: #1a1a1a; /* Darker color for distinction */
     color: green; /* Ensuring the text is visible against the darker footer */
