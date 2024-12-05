@@ -62,25 +62,30 @@ ul.menu a:hover {
 
 /* Styling the terminal container */
 #terminal {
-    border: 2px solid #0F0; /* Green border for the box */
-    padding: 0; /* Remove extra padding */
-    max-width: 640px; /* Match the video width */
-    margin: auto; /* Center the terminal box horizontally */
-    text-align: center; /* Center align the content */
+    border: 2px solid #0F0;
+    padding: 0; /* Remove unnecessary padding */
+    width: 100%; /* Allow the container to span the full screen width */
+    max-width: 100vw; /* Prevent the container from overflowing the viewport */
+    height: 100vh; /* Ensure it fills the screen height */
+    box-sizing: border-box;
     display: flex;
-    flex-direction: column; /* Stack video and button */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    height: 100vh; /* Full viewport height */
-    box-sizing: border-box; /* Includes padding in the dimensions */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
 }
+
 
 /* Styling the video */
 video {
-    width: 100%; /* Match the terminal box width */
-    height: auto; /* Maintain the aspect ratio */
-    margin: 0; /* Remove any extra margin */
+    max-width: 100%; /* Ensures the video does not exceed the container width */
+    max-height: 100%; /* Ensures the video does not exceed the container height */
+    width: auto; /* Automatically adjust width */
+    height: auto; /* Automatically adjust height */
+    display: block; /* Removes inline spacing */
+    margin: 0 auto; /* Centers the video */
+    object-fit: contain; /* Ensures the video is scaled properly within its container */
 }
+
 
 /* Styling the button */
 button {
