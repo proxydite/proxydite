@@ -130,6 +130,25 @@ ul.menu a:hover {
     max-width: 90%;
     max-height: 90%;
     display: flex;
+    flex-direction: column; /* Stack images vertically */
+    gap: 20px; /* Space between images */
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Add some padding for better spacing */
+}
+
+.modal-content img {
+    width: 100%; /* Full width for vertical layout */
+    max-width: 700px; /* Set a maximum width for large screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin: 10px 0; /* Vertical margin between images */
+}
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
@@ -151,15 +170,20 @@ ul.menu a:hover {
 }
 
 .modal-content .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
+    position: fixed; /* Ensure it stays in a fixed position */
+    top: 20px; /* Distance from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Align the button center */
     font-size: 30px;
     color: white;
     text-decoration: none;
     cursor: pointer;
-    z-index: 1100;
+    z-index: 1100; /* Ensure it stays above content */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: add a background for visibility */
+    padding: 5px 10px; /* Add padding for better clickability */
+    border-radius: 5px; /* Optional: round the edges */
 }
+
  
 footer {
     background-color: #000000; /* Darker color for distinction */

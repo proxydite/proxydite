@@ -143,6 +143,42 @@
     <footer>
         <p>&copy; 2024 proxydite. All rights reserved.</p>
     </footer>
-<!-- </body> -->
+
+<script>
+    // Function to close the modal by resetting the URL hash
+    function closeModal() {
+        if (window.location.hash) {
+            window.location.hash = ''; // Clear the hash to close the modal
+        }
+    }
+
+    // Event listener for the Esc key
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
+    });
+
+    // Event listener for modal close buttons
+    document.querySelectorAll('.close').forEach(button => {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+            closeModal();
+        });
+    });
+
+    // Optional: Prevent scrolling to the top when opening modals
+    document.querySelectorAll('.gallery-item a').forEach(link => {
+        link.addEventListener('click', function (event) {
+            const target = this.getAttribute('href');
+            if (target.startsWith('#')) {
+                event.preventDefault();
+                window.location.hash = target.slice(1);
+            }
+        });
+    });
+</script>
+
+
 
 </html>

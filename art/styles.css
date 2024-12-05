@@ -158,9 +158,9 @@ ul.menu a:hover {
     max-width: 90%;
     max-height: 90%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; /* Stack images vertically */
     gap: 10px;
-    justify-content: center;
+    justify-content: flex-start; /* Align items to the top */
     align-items: center;
 }
 
@@ -181,8 +181,9 @@ ul.menu a:hover {
 
 .modal-content .close {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
     font-size: 30px;
     color: white;
     text-decoration: none;
