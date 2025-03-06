@@ -5,8 +5,8 @@ body {
     padding: 3% 10%;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    height: 100vh;
+    justify-content: space-between; /* Pushes footer to bottom */
+    min-height: 100vh; /* Allows body to grow beyond viewport */
 }
 
 header {
@@ -112,14 +112,6 @@ ul.menu a:hover {
     box-sizing: border-box; /* To ensure that padding doesn't add to the overall width */
 }
 
-@keyframes glitch {
-    0% { transform: translate(0, 0); filter: hue-rotate(0deg); }
-    20% { transform: translate(-5px, 5px) rotate(1deg); filter: hue-rotate(90deg); }
-    40% { transform: translate(5px, -5px) rotate(-1deg); filter: hue-rotate(180deg); }
-    60% { transform: translate(-3px, 3px) rotate(0.5deg); filter: hue-rotate(270deg); }
-    80% { transform: translate(3px, -3px) rotate(-0.5deg); filter: hue-rotate(360deg); }
-    100% { transform: translate(0, 0); filter: hue-rotate(0deg); }
-}
 
 
 
