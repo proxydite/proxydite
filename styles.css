@@ -487,6 +487,41 @@ code {
 
 .music-links a { font-family: var(--font-display); font-weight: 600; }
 
+
+/* Bandcamp grid (Music) */
+.bandcamp-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items:start;
+}
+.bandcamp-grid iframe{
+  width: 100% !important;
+  max-width: 350px;
+  height: 470px;
+}
+@media (max-width: 900px){
+  .bandcamp-grid{
+    grid-template-columns: 1fr;
+  }
+  .bandcamp-grid iframe{
+    max-width: 100%;
+  }
+}
+
+/* Theatre credits block */
+.credits-block{
+  margin-top: 2rem;
+}
+.credits-title{
+  margin: 0 0 .5rem;
+  font-size: 1.05rem;
+  letter-spacing: .01em;
+}
+#workEmbeds{
+  margin-bottom: 1.25rem;
+}
+
 /* About */
 .two-col {
   display: grid;

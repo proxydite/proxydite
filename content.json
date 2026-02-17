@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "proxydite",
-    "tagline": "",
+    "tagline": "video + sound for calmer futures",
     "hero": {
       "name": "Ryan Samuel Davies",
       "lead": "proxydite (Ryan Samuel Davies) is a Welsh video and sound artist, creative technologist, and theatre video designer based in Swansea.",
@@ -18,24 +18,24 @@
   },
   "featured": null,
   "work": {
-    "heading": "Selected work",
+    "heading": "Selected Work",
     "intro": "A small selection of video + sound pieces, installations and image work.",
     "items": [
       {
         "title": "Beginning",
         "tag": "Image work",
-        "text": "A small study in colour and softness — the kind of image that can sit quietly in a room and keep unfolding.",
+        "text": "A small study in colour and softness - paper collage with digital editing",
         "images": [
           {
             "src": "assets/beginning.jpg",
-            "alt": "Abstract, pastel-toned image with flowing jellyfish-like forms"
+            "alt": "Abstract, pastel-toned image with flowing ethereal forms"
           }
         ]
       },
       {
         "title": "Untitled Flowers",
         "tag": "Image work",
-        "text": "A flower-study with heavy texture and grain — somewhere between a scan, a print, and a memory of a screen.",
+        "text": " flower-study with heavy texture and grain. Somewhere between a scan, a print, and a memory of a screen.",
         "images": [
           {
             "src": "assets/untitledflowers.jpg",
@@ -46,7 +46,7 @@
       {
         "title": "Rhyddid",
         "tag": "Installation / screening",
-        "text": "Documentation still from an installation / screening environment: projected moving-image, shared attention.",
+        "text": "Documentation still from an installation / screening environment: projected moving-image.",
         "images": [
           {
             "src": "assets/rhyddid.jpg",
@@ -55,22 +55,20 @@
         ]
       }
     ],
-    "embeds": {
-      "instagram": [
-        "https://www.instagram.com/p/DUyrsjEjlPr/?utm_source=ig_embed&utm_campaign=loading",
-        "https://www.instagram.com/reel/DUv-Xq_Dtb0/?utm_source=ig_embed&utm_campaign=loading"
-      ]
-    }
+    "instagramEmbedsHtml": [
+      "<blockquote class=\"instagram-media\" data-instgrm-captioned data-instgrm-permalink=\"https://www.instagram.com/p/DUyrsjEjlPr/?utm_source=ig_embed&amp;utm_campaign=loading\" data-instgrm-version=\"14\" style=\" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);\">\n  <div style=\"padding:16px;\">\n    <a href=\"https://www.instagram.com/p/DUyrsjEjlPr/?utm_source=ig_embed&amp;utm_campaign=loading\" style=\" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;\" target=\"_blank\"></a>\n  </div>\n</blockquote>",
+      "<blockquote class=\"instagram-media\" data-instgrm-captioned data-instgrm-permalink=\"https://www.instagram.com/reel/DUv-Xq_Dtb0/?utm_source=ig_embed&amp;utm_campaign=loading\" data-instgrm-version=\"14\" style=\" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);\">\n  <div style=\"padding:16px;\">\n    <a href=\"https://www.instagram.com/reel/DUv-Xq_Dtb0/?utm_source=ig_embed&amp;utm_campaign=loading\" style=\" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;\" target=\"_blank\"></a>\n  </div>\n</blockquote>"
+    ]
   },
   "theatre": {
-    "heading": "Theatre (selected)",
-    "intro": "A small selection of theatre work — recent credits first, then a fuller list if you want to dig.",
+    "heading": "Theatre",
+    "intro": "Video design for theatre. P projected image, live camera, and scenic systems built to hold story, breath, and atmosphere.",
     "items": [
       {
         "title": "The Hunger Games On Stage",
         "year": "2025",
         "tag": "Theatre",
-        "text": "Animator for screen content on the stage adaptation.",
+        "text": "Animator for screen content on the stage adaptation, working for Video Designer Tal Rosner.",
         "meta": [
           {
             "label": "Role",
@@ -82,7 +80,7 @@
           },
           {
             "label": "Video Designer",
-            "value": "Tal Rosner"
+            "value": "Tal Rosner (worked for)"
           },
           {
             "label": "Website",
@@ -105,10 +103,6 @@
       {
         "title": "Silent Night, Raging Eve",
         "year": "2025",
-        "role": "Lighting, Sound and Video Designer",
-        "venue": "Volcano Theatre",
-        "image": "assets/snre.JPG",
-        "description": "Lighting, sound and video design by Ryan Samuel Davies.",
         "meta": [
           {
             "label": "Role",
@@ -122,9 +116,23 @@
             "label": "Website",
             "value": "https://volcanotheatre.wales/silent-night-raging-eve/"
           },
+        ],
+        "tag": "Theatre",
+        "text": "Lighting, sound and video design for Volcano Theatre.",
+        "images": [
+          {
+            "src": "assets/snre.JPG",
+            "alt": "Stage image from Silent Night, Raging Eve"
+          }
+        ],
+        "links": [
+          {
+            "label": "Production page",
+            "url": "https://volcanotheatre.wales/silent-night-raging-eve/"
+          },
           {
             "label": "Review",
-            "value": "https://www.britishtheatreguide.info/reviews/silent-night-r-volcano-theatre-25133"
+            "url": "https://www.britishtheatreguide.info/reviews/silent-night-r-volcano-theatre-25133"
           }
         ]
       },
@@ -164,7 +172,7 @@
         "title": "You Know My Mum",
         "year": "2025",
         "tag": "Theatre",
-        "text": "Associate Video Designer for Belgrade Theatre, Coventry & national tour.",
+        "text": "Associate Video Designer for Belgrade Theatre, Coventry & national tour, working for Video Designer Hayley Egan.",
         "meta": [
           {
             "label": "Role",
@@ -186,7 +194,7 @@
         "links": [
           {
             "label": "Production info",
-            "url": "https://egoarts.co.uk"
+            "url": "https://www.belgrade.co.uk/events/you-know-my-mum/"
           }
         ],
         "images": [
@@ -199,7 +207,7 @@
       {
         "title": "Iphigenia Yn Sblot",
         "tag": "Theatre",
-        "text": "Video design for Sherman Theatre.",
+        "text": "Video design for Sherman Theatre. Welsh language premiere.",
         "meta": [
           {
             "label": "Role",
@@ -223,26 +231,26 @@
           }
         ],
         "year": "2024",
-        "description": "Welsh-language premiere."
+        "description": "Welsh language premiere."
       },
       {
-        "title": "Shorts — Buxton International Festival",
+        "title": "Opera Triple Bill",
         "tag": "Opera",
-        "text": "Programmer for Shorts at Buxton International Festival (Opera).",
+        "text": "Video Designer for Opera Triple Bill.",
         "meta": [
           {
             "label": "Role",
-            "value": "Programmer"
+            "value": "Video Designer"
           },
           {
-            "label": "Festival",
-            "value": "Buxton International Festival"
+            "label": "Venue",
+            "value": "Silk Street Theatre, Barbican"
           }
         ],
         "links": [
           {
-            "label": "Buxton Festival",
-            "url": "https://buxtonfestival.co.uk"
+            "label": "Barbican",
+            "url": "https://www.barbican.org.uk/whats-on/2022/event/opera-triple-bill"
           }
         ],
         "images": [
@@ -250,66 +258,23 @@
             "src": "assets/opera.jpg",
             "alt": "A performer stands silhouetted against a large projected face"
           }
-        ]
-      }
-    ]
-  },
-  "videos": {
-    "heading": "Video notes",
-    "intro": "Two recent snippets — embedded from Instagram. (This will grow over time.)",
-    "instagram": [
-      {
-        "url": "https://www.instagram.com/p/DUyrsjEjlPr/",
-        "captioned": true
-      },
-      {
-        "url": "https://www.instagram.com/reel/DUv-Xq_Dtb0/",
-        "captioned": true
+        ],
+        "summary": "Video Designer for Opera Triple Bill.",
+        "year": "2022",
+        "role": "Video Designer",
+        "venue": "Silk Street Theatre, Barbican"
       }
     ]
   },
   "music": {
     "heading": "Music",
-    "intro": "Four releases on Bandcamp — anxious lullabies, loops, and field-note melodrama.",
-    "releases": [
-      {
-        "title": "Socially Awkward Chicken",
-        "url": "https://proxydite.bandcamp.com/album/socially-awkward-chicken",
-        "embedSrc": "https://bandcamp.com/EmbeddedPlayer/album=1100942024/size=large/bgcol=ffffff/linkcol=111111/tracklist=false/transparent=true/",
-        "height": 472
-      },
-      {
-        "title": "what the fuck is going on? (or how I see things)",
-        "url": "https://proxydite.bandcamp.com/album/what-the-fuck-is-going-on-or-how-i-see-things",
-        "embedSrc": "https://bandcamp.com/EmbeddedPlayer/album=1564290007/size=large/bgcol=ffffff/linkcol=111111/tracklist=false/transparent=true/",
-        "height": 472
-      },
-      {
-        "title": "non, je ne regrette rien",
-        "url": "https://proxydite.bandcamp.com/album/non-je-ne-regrette-rien",
-        "embedSrc": "https://bandcamp.com/EmbeddedPlayer/album=2157833055/size=large/bgcol=ffffff/linkcol=111111/tracklist=false/transparent=true/",
-        "height": 472
-      },
-      {
-        "title": "TODAY, TOMORROW & YESTERDAY",
-        "url": "https://proxydite.bandcamp.com/album/today-tomorrow-yesterday",
-        "embedSrc": "https://bandcamp.com/EmbeddedPlayer/album=3406587432/size=large/bgcol=ffffff/linkcol=111111/tracklist=false/transparent=true/",
-        "height": 472
-      }
-    ],
-    "embeds": [
-      "<iframe style=\"border: 0; width: 350px; height: 470px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3287311794/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/transparent=true/\" seamless><a href=\"https://proxydite.bandcamp.com/album/socially-awkward-chicken\">socially awkward chicken by proxydite</a></iframe>",
-      "<iframe style=\"border: 0; width: 350px; height: 470px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1514763297/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/transparent=true/\" seamless><a href=\"https://proxydite.bandcamp.com/album/what-the-fuck-is-going-on-or-how-i-see-things\">what the fuck is going on? (or how I see things) by proxydite</a></iframe>",
-      "<iframe style=\"border: 0; width: 350px; height: 470px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=495219216/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/transparent=true/\" seamless><a href=\"https://proxydite.bandcamp.com/album/non-je-ne-regrette-rien\">non, je ne regrette rien by proxydite</a></iframe>",
-      "<iframe style=\"border: 0; width: 350px; height: 470px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3354648981/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/transparent=true/\" seamless><a href=\"https://proxydite.bandcamp.com/album/today-tomorrow-yesterday\">TODAY, TOMORROW &amp; YESTERDAY by proxydite</a></iframe>"
-    ]
+    "intro": "Four releases — built from field recordings, synth fragments, and small, stubborn melodies.",
+    "bandcampHtml": "<div class=\"bandcamp-grid\">\n  <iframe style=\"border: 0; width: 350px; height: 470px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3287311794/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/transparent=true/\" seamless>\n    <a href=\"https://proxydite.bandcamp.com/album/socially-awkward-chicken\">socially awkward chicken by proxydite</a>\n  </iframe>\n\n  <iframe style=\"border: 0; width: 350px; height: 470px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=1514763297/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/transparent=true/\" seamless>\n    <a href=\"https://proxydite.bandcamp.com/album/what-the-fuck-is-going-on-or-how-i-see-things\">what the fuck is going on? (or how I see things) by proxydite</a>\n  </iframe>\n\n  <iframe style=\"border: 0; width: 350px; height: 470px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=495219216/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/transparent=true/\" seamless>\n    <a href=\"https://proxydite.bandcamp.com/album/non-je-ne-regrette-rien\">non, je ne regrette rien by proxydite</a>\n  </iframe>\n\n  <iframe style=\"border: 0; width: 350px; height: 470px;\" src=\"https://bandcamp.com/EmbeddedPlayer/album=3354648981/size=large/bgcol=333333/linkcol=2ebd35/tracklist=false/transparent=true/\" seamless>\n    <a href=\"https://proxydite.bandcamp.com/album/today-tomorrow-yesterday\">TODAY, TOMORROW &amp; YESTERDAY by proxydite</a>\n  </iframe>\n</div>"
   },
   "about": {
     "heading": "About",
-    "creditsButtonLabel": "Full theatre credits",
-    "paragraphs": [
-      "proxydite (Ryan Samuel Davies) is a Welsh video and sound artist, creative technologist, and theatre video designer based in Swansea. His practice reflects a staunch belief in nature as both sustainer of life and healer of soul, envisioning a harmony between decentralised tech and the wild.",
-      "In his spare time, Ryan is a writer and filmmaker, exploring stories that echo his roots and convictions."
+    "body": [
+      "proxydite (Ryan Samuel Davies) is a Welsh video and sound artist, creative technologist, and theatre video designer based in Swansea. His practice reflects a staunch belief in nature as both sustainer of life and healer of soul, envisioning a harmony between decentralised tech and the wild. In his spare time, Ryan is a writer and filmmaker, exploring stories that echo his roots and convictions. If you’re looking for a collaborator who can hold concept, composition and delivery — from early sketches to tech — say hello."
     ]
   },
   "availability": {
@@ -350,7 +315,7 @@
         "items": [
           {
             "title": "what the fuck is going on?",
-            "url": "https://volcanotheatre.wales",
+            "url": "https://volcanotheatre.wales/shape25/",
             "context": "Volcano Theatre",
             "notes": "also writer & performer"
           },
@@ -464,11 +429,6 @@
       {
         "role": "Programmer",
         "items": [
-          {
-            "title": "Shorts — Buxton International Festival (Opera)",
-            "url": "https://buxtonfestival.co.uk",
-            "context": "Opera"
-          },
           {
             "title": "Scissorhandz (Musical)",
             "url": "https://www.scissorhandzthemusical.com",

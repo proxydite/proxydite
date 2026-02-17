@@ -1,503 +1,373 @@
-/* proxydite — single-page site renderer */
+/* proxydite single-page site
+   - Content source: content.json (preferred when served via a local server)
+   - Fallback: content.js (for file:// preview) which defines window.SITE_CONTENT
+*/
 
-function qs(sel, parent = document) {
-  return parent.querySelector(sel);
+const CONTENT_URL = "./content.json";
+
+function isNonEmptyString(v) {
+  return typeof v === "string" && v.trim().length > 0;
 }
 
-function qsa(sel, parent = document) {
-  return [...parent.querySelectorAll(sel)];
+function safeGetEl(id) {
+  return document.getElementById(id) || null;
 }
 
-function setText(id, value) {
-  const el = document.getElementById(id);
+function setText(id, text) {
+  const el = safeGetEl(id);
   if (!el) return;
-  el.textContent = value ?? '';
+  el.textContent = isNonEmptyString(text) ? text : "";
+}
+
+function setHTML(id, html) {
+  const el = safeGetEl(id);
+  if (!el) return;
+  el.innerHTML = isNonEmptyString(html) ? html : "";
 }
 
 function escapeHtml(str) {
-  return String(str)
-    .replaceAll('&', '&amp;')
-    .replaceAll('<', '&lt;')
-    .replaceAll('>', '&gt;')
-    .replaceAll('"', '&quot;')
-    .replaceAll("'", '&#039;');
+  if (!isNonEmptyString(str)) return "";
+  return str
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function escapeAttr(str) {
+  return escapeHtml(str).replaceAll("\n", " ").trim();
 }
 
 async function loadContent() {
+  // Prefer content.json when served via a local server.
   try {
-    const res = await fetch('content.json', { cache: 'no-store' });
+    const res = await fetch(CONTENT_URL, { cache: "no-store" });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return await res.json();
-  } catch (err) {
-    // For local file:// preview, fetch() is blocked by most browsers.
-    if (window.SITE_CONTENT) return window.SITE_CONTENT;
-    console.error('Failed to load content.json and no fallback content.js was found.', err);
-    return null;
+    const data = await res.json();
+    if (!data || typeof data !== "object") throw new Error("Invalid JSON");
+    return data;
+  } catch (_) {
+    // Fallback for file:// preview
+    if (window.SITE_CONTENT && typeof window.SITE_CONTENT === "object") {
+      return window.SITE_CONTENT;
+    }
+    throw new Error(
+      "Content failed to load. Serve this folder with a local server (recommended), or ensure content.js is present for file:// preview."
+    );
   }
 }
 
-function renderFeaturedCredits(container, items = []) {
-  container.innerHTML = '';
-
-  if (!items.length) {
-    container.innerHTML = '<div class="loading">No featured credits yet.</div>';
-    return;
-  }
-
-  for (const item of items) {
-    const el = document.createElement(item.href ? 'a' : 'div');
-    el.className = 'featured-item';
-    if (item.href) {
-      el.href = item.href;
-      el.style.textDecoration = 'none';
-    }
-
-    const role = document.createElement('div');
-    role.className = 'featured-role';
-    role.textContent = item.role || '';
-
-    const title = document.createElement('div');
-    title.className = 'featured-title';
-    title.textContent = item.title || '';
-
-    const meta = document.createElement('p');
-    meta.className = 'featured-meta';
-    const parts = [item.context, item.year].filter(Boolean);
-    meta.textContent = parts.join(' · ');
-
-    el.appendChild(role);
-    el.appendChild(title);
-    el.appendChild(meta);
-
-    container.appendChild(el);
-  }
-}
-
-function renderWorkGrid(container, items = [], accent = 'work') {
-  container.innerHTML = '';
-
-  if (!items.length) {
-    container.innerHTML = '<div class="loading">No items yet.</div>';
-    return;
-  }
-
-  for (const item of items) {
-    const card = document.createElement('article');
-    card.className = 'work-card';
-    card.dataset.accent = accent;
-
-    // Media / images
-    if (Array.isArray(item.images) && item.images.length) {
-      const media = document.createElement('div');
-      media.className = 'work-media';
-
-      const gallery = document.createElement('div');
-      gallery.className = 'work-gallery';
-
-      for (const img of item.images) {
-        const image = document.createElement('img');
-        image.loading = 'lazy';
-        image.decoding = 'async';
-        image.src = img.src;
-        image.alt = img.alt || item.title || '';
-        gallery.appendChild(image);
-      }
-
-      media.appendChild(gallery);
-      card.appendChild(media);
-    }
-
-    // Body
-    const body = document.createElement('div');
-    body.className = 'work-body';
-
-    const top = document.createElement('div');
-    top.className = 'work-top';
-
-    const title = document.createElement('h3');
-    title.className = 'work-title';
-    title.textContent = item.title || '';
-
-    top.appendChild(title);
-
-    const tagText = [item.tag, item.year].filter(Boolean).join(' · ');
-    if (tagText) {
-      const tag = document.createElement('div');
-      tag.className = 'work-tag';
-      tag.textContent = tagText;
-      top.appendChild(tag);
-    }
-
-    body.appendChild(top);
-
-    if (item.text) {
-      const p = document.createElement('p');
-      p.className = 'work-text';
-      p.textContent = item.text;
-      body.appendChild(p);
-    }
-
-    const metaItems = Array.isArray(item.meta) ? [...item.meta] : [];
-
-    // If year exists and not already in meta, add it.
-    if (item.year && !metaItems.some(m => (m.label || '').toLowerCase() === 'year')) {
-      metaItems.unshift({ label: 'Year', value: item.year });
-    }
-
-    if (metaItems.length) {
-      const ul = document.createElement('ul');
-      ul.className = 'meta';
-      for (const m of metaItems) {
-        const li = document.createElement('li');
-        const label = document.createElement('span');
-        label.className = 'label';
-        label.textContent = m.label || '';
-        const value = document.createElement('span');
-        value.className = 'value';
-        value.textContent = m.value || '';
-        li.appendChild(label);
-        li.appendChild(value);
-        ul.appendChild(li);
-      }
-      body.appendChild(ul);
-    }
-
-    if (Array.isArray(item.links) && item.links.length) {
-      const links = document.createElement('div');
-      links.className = 'work-links';
-      for (const l of item.links) {
-        const a = document.createElement('a');
-        a.className = 'pill';
-        a.href = l.url;
-        a.target = '_blank';
-        a.rel = 'noopener';
-        a.textContent = l.label || 'Link';
-        links.appendChild(a);
-      }
-      body.appendChild(links);
-    }
-
-    card.appendChild(body);
-    container.appendChild(card);
-  }
-}
-
-function ensureInstagramScript() {
-  return new Promise((resolve, reject) => {
-    if (window.instgrm && window.instgrm.Embeds) {
-      resolve();
-      return;
-    }
-
-    const existing = document.querySelector('script[src="https://www.instagram.com/embed.js"]');
-    if (existing) {
-      existing.addEventListener('load', () => resolve(), { once: true });
-      existing.addEventListener('error', () => reject(new Error('Instagram script failed to load.')), { once: true });
-      return;
-    }
-
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://www.instagram.com/embed.js';
-    script.onload = () => resolve();
-    script.onerror = () => reject(new Error('Instagram script failed to load.'));
-    document.body.appendChild(script);
+function ensureImageSrc(img, fallbackSrc) {
+  if (!img) return;
+  img.addEventListener("error", () => {
+    if (fallbackSrc && img.src !== fallbackSrc) img.src = fallbackSrc;
   });
 }
 
-async function renderInstagramEmbeds(container, posts = []) {
-  container.innerHTML = '';
+function applySocialLinks(social) {
+  if (!social || typeof social !== "object") return;
 
-  if (!posts.length) {
-    container.innerHTML = '<div class="loading">No videos yet.</div>';
+  const items = [
+    ["instagram", "socialInstagram"],
+    ["youtube", "socialYouTube"],
+    ["bandcamp", "socialBandcamp"],
+    ["vimeo", "socialVimeo"],
+  ];
+
+  for (const [key, id] of items) {
+    const url = social[key];
+    const el = safeGetEl(id);
+    if (!el) continue;
+    if (isNonEmptyString(url)) {
+      el.href = url;
+      el.classList.remove("is-hidden");
+    } else {
+      el.classList.add("is-hidden");
+    }
+  }
+}
+
+function renderWorkGrid(container, items) {
+  if (!container) return;
+  container.innerHTML = "";
+
+  if (!Array.isArray(items) || items.length === 0) {
+    container.innerHTML = `<p class="muted">No items yet.</p>`;
     return;
   }
 
-  for (const post of posts) {
-    const card = document.createElement('div');
-    card.className = 'embed-card';
+  for (const item of items) {
+    const card = document.createElement("article");
+    card.className = "work-card";
 
-    const blockquote = document.createElement('blockquote');
-    blockquote.className = 'instagram-media';
-    blockquote.setAttribute('data-instgrm-permalink', post.url);
-    blockquote.setAttribute('data-instgrm-version', '14');
-    if (post.captioned) blockquote.setAttribute('data-instgrm-captioned', '');
+    const title = escapeHtml(item.title || "");
+    const year = escapeHtml(item.year || "");
+    const tag = escapeHtml(item.tag || "");
+    const text = escapeHtml(item.text || "");
 
-    // Minimal placeholder (the embed.js script will replace it).
-    blockquote.innerHTML = `
-      <a href="${escapeHtml(post.url)}" target="_blank" rel="noopener">View this on Instagram</a>
+    const images = Array.isArray(item.images) ? item.images : [];
+    const firstImg = images[0];
+
+    let mediaHtml = "";
+    if (firstImg && isNonEmptyString(firstImg.src)) {
+      mediaHtml = `
+        <div class="work-media">
+          <img src="${escapeAttr(firstImg.src)}" alt="${escapeAttr(firstImg.alt || item.title || "")}" loading="lazy" decoding="async">
+        </div>
+      `;
+    }
+
+    const meta = Array.isArray(item.meta) ? item.meta : [];
+    const metaHtml = meta.length
+      ? `<ul class="meta">
+          ${meta
+            .map((m) => {
+              const label = escapeHtml(m.label || "");
+              const value = escapeHtml(m.value || "");
+              return `<li><span class="meta-label">${label}</span><span class="meta-value">${value}</span></li>`;
+            })
+            .join("")}
+        </ul>`
+      : "";
+
+    const links = Array.isArray(item.links) ? item.links : [];
+    const linksHtml = links.length
+      ? `<div class="links">
+          ${links
+            .map((l) => {
+              const label = escapeHtml(l.label || "Link");
+              const url = escapeAttr(l.url || "#");
+              return `<a href="${url}" target="_blank" rel="noopener">${label} ↗</a>`;
+            })
+            .join("")}
+        </div>`
+      : "";
+
+    card.innerHTML = `
+      ${mediaHtml}
+      <div class="work-body">
+        <div class="work-top">
+          <h3>${title}</h3>
+          <div class="work-tags">
+            ${tag ? `<span class="pill">${tag}</span>` : ""}
+            ${year ? `<span class="pill">${year}</span>` : ""}
+          </div>
+        </div>
+        ${text ? `<p class="muted">${text}</p>` : ""}
+        ${metaHtml}
+        ${linksHtml}
+      </div>
     `;
 
-    card.appendChild(blockquote);
-    container.appendChild(card);
-  }
-
-  try {
-    await ensureInstagramScript();
-    if (window.instgrm && window.instgrm.Embeds && typeof window.instgrm.Embeds.process === 'function') {
-      window.instgrm.Embeds.process();
-    }
-  } catch (err) {
-    console.warn(err);
-    // Leave placeholder links in place.
-  }
-}
-
-function renderMusic(container, releases = []) {
-  container.innerHTML = '';
-
-  if (!releases.length) {
-    container.innerHTML = '<div class="loading">No releases yet.</div>';
-    return;
-  }
-
-  for (const rel of releases) {
-    const card = document.createElement('article');
-    card.className = 'music-card';
-
-    const h = document.createElement('h3');
-    h.textContent = rel.title || 'Release';
-
-    const iframe = document.createElement('iframe');
-    iframe.className = 'music-frame';
-    iframe.loading = 'lazy';
-    iframe.src = rel.embedSrc;
-    iframe.height = rel.height || 472;
-    iframe.setAttribute('title', `${rel.title || 'Bandcamp'} player`);
-    iframe.setAttribute('seamless', '');
-
-    const links = document.createElement('div');
-    links.className = 'music-links';
-    links.innerHTML = `<a href="${escapeHtml(rel.url)}" target="_blank" rel="noopener">Open on Bandcamp →</a>`;
-
-    card.appendChild(h);
-    card.appendChild(iframe);
-    card.appendChild(links);
-
     container.appendChild(card);
   }
 }
 
-function renderAbout(container, paragraphs = []) {
-  container.innerHTML = '';
+function renderParagraphs(container, paragraphs) {
+  if (!container) return;
+  container.innerHTML = "";
+
+  if (!Array.isArray(paragraphs) || paragraphs.length === 0) return;
+
   for (const p of paragraphs) {
-    const el = document.createElement('p');
-    el.textContent = p;
+    const el = document.createElement("p");
+    el.textContent = isNonEmptyString(p) ? p : "";
     container.appendChild(el);
   }
 }
 
-function renderAvailability(listEl, bullets = []) {
-  listEl.innerHTML = '';
-  for (const b of bullets) {
-    const li = document.createElement('li');
-    li.textContent = b;
-    listEl.appendChild(li);
+function renderBullets(container, items) {
+  if (!container) return;
+  container.innerHTML = "";
+  if (!Array.isArray(items) || items.length === 0) return;
+
+  for (const item of items) {
+    const li = document.createElement("li");
+    li.textContent = isNonEmptyString(item) ? item : "";
+    container.appendChild(li);
   }
 }
 
-function setupCreditsModal(content) {
-  const modal = document.getElementById('creditsModal');
-  const openBtn = document.getElementById('openCreditsBtn');
-  const closeEls = qsa('[data-close]', modal);
-  const creditsTitle = document.getElementById('creditsTitle');
-  const creditsNote = document.getElementById('creditsNote');
-  const creditsContent = document.getElementById('creditsContent');
+function ensureInstagramScriptLoaded() {
+  if (window.instgrm?.Embeds?.process) return Promise.resolve();
 
-  if (!modal || !openBtn || !creditsContent) return;
+  const existing = Array.from(document.scripts).find((s) =>
+    (s.src || "").includes("instagram.com/embed.js")
+  );
 
-  const credits = content.theatreCredits;
-  if (!credits) {
-    openBtn.style.display = 'none';
-    return;
+  const waitForInstgrm = () =>
+    new Promise((resolve) => {
+      const start = Date.now();
+      const tick = () => {
+        if (window.instgrm?.Embeds?.process) return resolve();
+        if (Date.now() - start > 5000) return resolve(); // fail soft
+        requestAnimationFrame(tick);
+      };
+      tick();
+    });
+
+  if (existing) {
+    // If it already loaded, instgrm should appear quickly; if not, wait softly.
+    return waitForInstgrm();
   }
 
-  creditsTitle.textContent = credits.heading || 'Full theatre credits';
-  creditsNote.textContent = credits.note || '';
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = "https://www.instagram.com/embed.js";
+  document.body.appendChild(script);
+  return waitForInstgrm();
+}
 
-  // Build credits UI
-  creditsContent.innerHTML = '';
-  for (const group of credits.groups || []) {
-    const details = document.createElement('details');
+async function renderInstagramEmbeds(container, embedsHtml) {
+  if (!container) return;
 
-    const summary = document.createElement('summary');
-    summary.textContent = group.role || 'Credits';
+  container.innerHTML = "";
+  if (!Array.isArray(embedsHtml) || embedsHtml.length === 0) return;
 
+  for (const html of embedsHtml) {
+    const wrap = document.createElement("div");
+    wrap.className = "embed-card";
+    wrap.innerHTML = html; // trusted, provided by site owner
+    container.appendChild(wrap);
+  }
+
+  await ensureInstagramScriptLoaded();
+  if (window.instgrm?.Embeds?.process) {
+    window.instgrm.Embeds.process();
+  }
+}
+
+function renderTheatreCredits(container, credits) {
+  if (!container) return;
+  container.innerHTML = "";
+
+  if (!credits || typeof credits !== "object") return;
+  const groups = Array.isArray(credits.groups) ? credits.groups : [];
+  if (groups.length === 0) return;
+
+  for (const group of groups) {
+    const details = document.createElement("details");
+    details.className = "credits-group";
+
+    const summary = document.createElement("summary");
+    summary.textContent = group.role || "Credits";
     details.appendChild(summary);
 
-    const ul = document.createElement('ul');
-
+    const ul = document.createElement("ul");
     for (const item of group.items || []) {
-      const li = document.createElement('li');
-      const title = item.title || '';
-      const ctx = item.context ? ` — ${item.context}` : '';
-      const notes = item.notes ? ` (${item.notes})` : '';
+      const li = document.createElement("li");
       if (item.url) {
-        li.innerHTML = `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(title)}</a>${escapeHtml(ctx)}${escapeHtml(notes)}`;
+        const a = document.createElement("a");
+        a.href = item.url;
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.textContent = item.title || "";
+        li.appendChild(a);
       } else {
-        li.textContent = `${title}${ctx}${notes}`;
+        li.textContent = item.title || "";
       }
       ul.appendChild(li);
     }
-
     details.appendChild(ul);
-    creditsContent.appendChild(details);
+
+    container.appendChild(details);
   }
-
-  let lastFocus = null;
-
-  function openModal() {
-    lastFocus = document.activeElement;
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-
-    // Focus the close button.
-    const close = qs('[data-close]', modal);
-    if (close) close.focus();
-  }
-
-  function closeModal() {
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
-  }
-
-  openBtn.addEventListener('click', openModal);
-  for (const el of closeEls) {
-    el.addEventListener('click', closeModal);
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') {
-      closeModal();
-    }
-  });
-
-  // Prevent clicks in dialog from closing modal
-  const dialog = qs('.modal-dialog', modal);
-  if (dialog) {
-    dialog.addEventListener('click', (e) => e.stopPropagation());
-  }
-
-  // Backdrop click closes
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal || e.target.classList.contains('modal-backdrop')) {
-      closeModal();
-    }
-  });
 }
 
-function applySocialLinks(content) {
-  const { social } = content.site || {};
-  if (!social) return;
+function renderBandcamp(container, html) {
+  if (!container) return;
+  container.innerHTML = isNonEmptyString(html) ? html : "";
+}
 
-  const insta = qs('a[aria-label="Instagram"]');
-  const x = qs('a[aria-label="X"]');
-  if (insta && social.instagram) insta.href = social.instagram;
-  if (x && social.x) x.href = social.x;
+function enableSmoothScrolling() {
+  // Smooth scroll within page
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+
+    const href = a.getAttribute("href");
+    if (!href || href === "#") return;
+
+    const target = document.querySelector(href);
+    if (!target) return;
+
+    e.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 }
 
 async function main() {
-  setText('year', new Date().getFullYear());
-
   const content = await loadContent();
-  if (!content) return;
 
-  // Site / hero
-  if (content.site) {
-    document.title = content.site.title || document.title;
-    setText('brandTitle', content.site.title || 'proxydite');
-    setText('brandSubtitle', content.site.tagline || '');
+  // Brand + meta
+  const siteTitle = content?.site?.title || "proxydite";
+  document.title = siteTitle;
 
-    const hero = content.site.hero || {};
-    setText('heroName', hero.name || '');
-    setText('heroLead', hero.lead || '');
-    setText('heroTagline', content.site.tagline || '');
+  setText("brandTitle", siteTitle);
+  setText("brandSubtitle", content?.site?.tagline || "");
 
-    if (hero.image?.src) {
-      const img = document.getElementById('heroImg');
-      if (img) {
-        img.src = hero.image.src;
-        img.alt = hero.image.alt || '';
-      }
-    }
+  // Hero
+  setText("heroName", content?.site?.hero?.name || "");
+  setText("heroLead", content?.site?.hero?.lead || "");
 
-    // Hero CTA
-    const heroCta = document.getElementById('heroCta');
-    if (heroCta && Array.isArray(hero.cta) && hero.cta.length) {
-      heroCta.innerHTML = '';
-      hero.cta.slice(0, 3).forEach((c, idx) => {
-        const a = document.createElement('a');
-        a.href = c.href;
-        a.className = idx === 0 ? 'btn' : 'btn btn-ghost';
-        a.textContent = c.label;
-        heroCta.appendChild(a);
-      });
-    }
-
-    applySocialLinks(content);
+  const heroImg = safeGetEl("heroImg");
+  if (heroImg && content?.site?.hero?.image?.src) {
+    heroImg.src = content.site.hero.image.src;
+    heroImg.alt = content.site.hero.image.alt || "Hero image";
   }
+  ensureImageSrc(heroImg, "assets/portrait.jpg");
 
-  // Featured
-  if (content.featured) {
-    setText('featuredHeading', content.featured.heading || 'Recent credits');
-    renderFeaturedCredits(document.getElementById('featuredCredits'), content.featured.items || []);
-  }
+  // Hero CTA (kept optional; this site currently uses text-only hero)
+  const heroCta = safeGetEl("heroCta");
+  if (heroCta) heroCta.innerHTML = "";
 
-  // Selected work
-  if (content.work) {
-    setText('workHeading', content.work.heading || 'Selected work');
-    setText('workIntro', content.work.intro || '');
-    renderWorkGrid(document.getElementById('workGrid'), content.work.items || [], 'work');
-  }
+  // Social links
+  applySocialLinks(content?.site?.social || {});
+
+  // Work
+  setText("workHeading", content?.work?.heading || "");
+  setText("workIntro", content?.work?.intro || "");
+  await renderInstagramEmbeds(safeGetEl("workEmbeds"), content?.work?.instagramEmbedsHtml || []);
+  renderWorkGrid(safeGetEl("workGrid"), content?.work?.items || []);
+
+  // About + Availability
+  setText("aboutHeading", content?.about?.heading || "");
+  renderParagraphs(safeGetEl("aboutBody"), content?.about?.body || []);
+
+  setText("availabilityHeading", content?.availability?.heading || "");
+  renderBullets(safeGetEl("availabilityBullets"), content?.availability?.bullets || []);
 
   // Theatre
-  if (content.theatre) {
-    setText('theatreHeading', content.theatre.heading || 'Theatre (selected)');
-    setText('theatreIntro', content.theatre.intro || '');
-    renderWorkGrid(document.getElementById('theatreGrid'), content.theatre.items || [], 'theatre');
-  }
+  setText("theatreHeading", content?.theatre?.heading || "");
+  setText("theatreIntro", content?.theatre?.intro || "");
+  renderWorkGrid(safeGetEl("theatreGrid"), content?.theatre?.items || []);
 
-  // Videos
-  if (content.videos) {
-    setText('videosHeading', content.videos.heading || 'Video notes');
-    setText('videosIntro', content.videos.intro || '');
-    await renderInstagramEmbeds(document.getElementById('instagramEmbeds'), content.videos.instagram || []);
-  }
+  // Full theatre credits (inline)
+  setText("theatreCreditsHeading", content?.theatreCredits?.heading || "Full theatre credits");
+  setText("theatreCreditsNote", content?.theatreCredits?.note || "");
+  renderTheatreCredits(safeGetEl("theatreCreditsContent"), content?.theatreCredits || {});
 
-  // Music
-  if (content.music) {
-    setText('musicHeading', content.music.heading || 'Music');
-    setText('musicIntro', content.music.intro || '');
-    renderMusic(document.getElementById('musicGrid'), content.music.releases || []);
-  }
-
-  // About
-  if (content.about) {
-    setText('aboutHeading', content.about.heading || 'About');
-    renderAbout(document.getElementById('aboutBody'), content.about.body || []);
-    setText('openCreditsBtn', content.about.creditsButtonLabel || 'Full theatre credits');
-  }
-
-  // Availability
-  if (content.availability) {
-    setText('availabilityHeading', content.availability.heading || 'Work with me');
-    renderAvailability(document.getElementById('availabilityBullets'), content.availability.bullets || []);
-  }
+  // Music (Bandcamp grid)
+  setText("musicHeading", content?.music?.heading || "");
+  setText("musicIntro", content?.music?.intro || "");
+  renderBandcamp(safeGetEl("musicEmbeds"), content?.music?.bandcampHtml || "");
 
   // Contact
-  if (content.contact) {
-    setText('contactHeading', content.contact.heading || 'Contact');
-    const email = content.contact.email || '';
-    const emailEl = document.getElementById('contactEmail');
-    if (emailEl && email) {
-      emailEl.textContent = email;
-      emailEl.href = `mailto:${email}`;
-    }
-    setText('contactNote', content.contact.note || '');
+  setText("contactHeading", content?.contact?.heading || "");
+  const emailEl = safeGetEl("contactEmail");
+  if (emailEl && isNonEmptyString(content?.contact?.email)) {
+    emailEl.href = `mailto:${content.contact.email}`;
+    emailEl.textContent = content.contact.email;
   }
+  setText("contactNote", content?.contact?.note || "");
 
-  setupCreditsModal(content);
+  enableSmoothScrolling();
 }
 
-main();
+document.addEventListener("DOMContentLoaded", () => {
+  main().catch((err) => {
+    // Keep the page usable even if content load fails.
+    console.error(err);
+  });
+});

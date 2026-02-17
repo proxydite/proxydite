@@ -55,13 +55,9 @@
           <img id="heroImg" src="assets/portrait.jpeg" alt="Portrait of Ryan Samuel Davies" loading="eager" decoding="async" onerror="this.onerror=null; this.src='assets/portrait.jpg';" />
         </div>
         <div class="hero-text">
-          <p class="eyebrow" id="heroTagline">video + sound for calmer futures</p>
           <h1 id="heroName">Ryan Samuel Davies</h1>
-          <p class="lead" id="heroLead">video + sound across theatre, installation and moving-image work.</p>
-          <div class="hero-cta" id="heroCta">
-            <a class="btn" href="#work">Selected work</a>
-            <a class="btn btn-ghost" href="#contact">Contact</a>
-          </div>
+          <p class="lead" id="heroLead">proxydite (Ryan Samuel Davies) is a Welsh video and sound artist, creative technologist, and theatre video designer based in Swansea.</p>
+          <div class="hero-cta" id="heroCta"></div>
         </div>
       </div>
     </section>
@@ -69,9 +65,12 @@
 <section class="section" id="work">
       <div class="container">
         <div class="section-head">
-          <h2 class="section-title"><span class="section-icon" aria-hidden="true">◌</span><span id="workHeading">Selected work</span></h2>
+          <h2 class="section-title"><span class="section-icon" aria-hidden="true">◌</span><span id="workHeading">Selected Work</span></h2>
           <p class="section-note" id="workIntro">A small selection of video + sound pieces, installations and image work.</p>
         </div>
+
+        <div class="embed-grid" id="workEmbeds"></div>
+
         <div class="work-grid" id="workGrid">
           <div class="loading">Loading…</div>
         </div>
@@ -85,7 +84,6 @@
           <div class="about" id="aboutBody">
             <p class="muted">Loading…</p>
           </div>
-          <button class="btn btn-ghost" id="openCreditsBtn" type="button">Full theatre credits</button>
         </div>
 
         <div>
@@ -100,11 +98,20 @@
 <section class="section" id="theatre">
       <div class="container">
         <div class="section-head">
-          <h2 class="section-title"><span class="section-icon" aria-hidden="true">⟡</span><span id="theatreHeading">Theatre (selected)</span></h2>
-          <p class="section-note" id="theatreIntro">A few recent theatre credits — kept tidy here so the rest of the page can breathe.</p>
+          <h2 class="section-title"><span class="section-icon" aria-hidden="true">⟡</span><span id="theatreHeading">Theatre</span></h2>
+          <p class="section-note" id="theatreIntro">Video design for theatre — projected image, live camera, and scenic systems built to hold story, breath, and atmosphere.</p>
         </div>
+
+        <p class="eyebrow" id="theatreRecentLabel">Recent credits</p>
+
         <div class="work-grid theatre-grid" id="theatreGrid">
           <div class="loading">Loading…</div>
+        </div>
+
+        <div class="credits-block">
+          <h3 class="credits-title" id="theatreCreditsHeading">Full theatre credits</h3>
+          <p class="muted" id="theatreCreditsNote"></p>
+          <div class="credits" id="theatreCreditsContent"></div>
         </div>
       </div>
     </section>
@@ -113,9 +120,9 @@
       <div class="container">
         <div class="section-head">
           <h2 class="section-title"><span class="section-icon" aria-hidden="true">♪</span><span id="musicHeading">Music</span></h2>
-          <p class="section-note" id="musicIntro">Releases on Bandcamp.</p>
+          <p class="section-note" id="musicIntro">Four releases — built from field recordings, synth fragments, and small, stubborn melodies.</p>
         </div>
-        <div class="music-grid" id="musicGrid">
+        <div id="musicEmbeds">
           <div class="loading">Loading…</div>
         </div>
       </div>
@@ -124,7 +131,7 @@
 <section class="section" id="contact">
       <div class="container">
         <h2 class="section-title"><span class="section-icon" aria-hidden="true">✉</span><span id="contactHeading">Contact</span></h2>
-        <p class="contact-line"><a class="email" id="contactEmail" href="mailto:proxydite@gmail.com">proxydite@gmail.com</a></p>
+        <p class="contact-line"><a class="email" id="contactEmail" href="mailto:hello@proxydite.net">hello@proxydite.net</a></p>
         <p class="muted" id="contactNote">For commissions, collaborations, or just to say hello.</p>
       </div>
     </section>
@@ -132,24 +139,10 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p class="muted">© <span id="year"></span> proxydite</p>
-      <p class="muted">Built as a small, editable single-page site. Update <code>content.json</code> (run a local server) or <code>content.js</code> (for file:// preview).</p>
+      <p class="muted">© 2026 Ryan Samuel Davies</p>
     </div>
   </footer>
 
-  <!-- Theatre credits modal -->
-  <div class="modal" id="creditsModal" aria-hidden="true">
-    <div class="modal-backdrop" data-close></div>
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="creditsTitle">
-      <div class="modal-head">
-        <h3 id="creditsTitle">Full theatre credits</h3>
-        <button class="icon-link" type="button" data-close aria-label="Close">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M18.3 5.7a1 1 0 0 0-1.4 0L12 10.6 7.1 5.7a1 1 0 0 0-1.4 1.4l4.9 4.9-4.9 4.9a1 1 0 1 0 1.4 1.4l4.9-4.9 4.9 4.9a1 1 0 0 0 1.4-1.4L13.4 12l4.9-4.9a1 1 0 0 0 0-1.4Z"/></svg>
-        </button>
-      </div>
-      <p class="muted" id="creditsNote"></p>
-      <div class="credits" id="creditsContent"></div>
-    </div>
-  </div>
+  <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
