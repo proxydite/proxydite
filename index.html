@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="proxydite — video + sound for calmer futures. Portfolio of Ryan Samuel Davies." />
+
+  <title>proxydite</title>
+
+  <link rel="icon" href="assets/favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Fallback content for file:// preview (content.json won't load without a local server) -->
+  <script defer src="content.js"></script>
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a class="brand-title" href="#top" id="brandTitle">proxydite</a>
+        <p class="brand-subtitle" id="brandSubtitle">video + sound for calmer futures</p>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#work" class="nav-link" data-accent="work"><span aria-hidden="true" class="nav-icon">✳︎</span>Work</a>
+        <a href="#about" class="nav-link" data-accent="about"><span aria-hidden="true" class="nav-icon">◎</span>About</a>
+        <a href="#theatre" class="nav-link" data-accent="theatre"><span aria-hidden="true" class="nav-icon">⟡</span>Theatre</a>
+        <a href="#music" class="nav-link" data-accent="music"><span aria-hidden="true" class="nav-icon">♪</span>Music</a>
+        <a href="#contact" class="nav-link" data-accent="contact"><span aria-hidden="true" class="nav-icon">✉</span>Contact</a>
+      </nav>
+
+      <div class="social">
+        <a class="icon-link" href="https://www.instagram.com/proxydite_/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm9.85 2.15a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/></svg>
+        </a>
+        <a class="icon-link" href="https://x.com/proxydite" target="_blank" rel="noopener" aria-label="X">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M18.9 2H22l-6.77 7.74L23.2 22h-6.64l-5.2-6.8L5.4 22H2.3l7.22-8.25L1 2h6.8l4.7 6.2L18.9 2Zm-1.16 18h1.72L6.18 3.9H4.35l13.39 16.1Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+<section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-image">
+          <img id="heroImg" src="assets/portrait.jpeg" alt="Portrait of Ryan Samuel Davies" loading="eager" decoding="async" onerror="this.onerror=null; this.src='assets/portrait.jpg';" />
+        </div>
+        <div class="hero-text">
+          <p class="eyebrow" id="heroTagline">video + sound for calmer futures</p>
+          <h1 id="heroName">Ryan Samuel Davies</h1>
+          <p class="lead" id="heroLead">video + sound across theatre, installation and moving-image work.</p>
+          <div class="hero-cta" id="heroCta">
+            <a class="btn" href="#work">Selected work</a>
+            <a class="btn btn-ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section" id="work">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title"><span class="section-icon" aria-hidden="true">◌</span><span id="workHeading">Selected work</span></h2>
+          <p class="section-note" id="workIntro">A small selection of video + sound pieces, installations and image work.</p>
+        </div>
+        <div class="work-grid" id="workGrid">
+          <div class="loading">Loading…</div>
+        </div>
+      </div>
+    </section>
+
+<section class="section" id="about">
+      <div class="container two-col">
+        <div>
+          <h2 class="section-title"><span class="section-icon" aria-hidden="true">◎</span><span id="aboutHeading">About</span></h2>
+          <div class="about" id="aboutBody">
+            <p class="muted">Loading…</p>
+          </div>
+          <button class="btn btn-ghost" id="openCreditsBtn" type="button">Full theatre credits</button>
+        </div>
+
+        <div>
+          <h2 class="section-title"><span class="section-icon" aria-hidden="true">✦</span><span id="availabilityHeading">Work with me</span></h2>
+          <ul class="bullets" id="availabilityBullets">
+            <li class="muted">Loading…</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+<section class="section" id="theatre">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title"><span class="section-icon" aria-hidden="true">⟡</span><span id="theatreHeading">Theatre (selected)</span></h2>
+          <p class="section-note" id="theatreIntro">A few recent theatre credits — kept tidy here so the rest of the page can breathe.</p>
+        </div>
+        <div class="work-grid theatre-grid" id="theatreGrid">
+          <div class="loading">Loading…</div>
+        </div>
+      </div>
+    </section>
+
+<section class="section" id="music">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title"><span class="section-icon" aria-hidden="true">♪</span><span id="musicHeading">Music</span></h2>
+          <p class="section-note" id="musicIntro">Releases on Bandcamp.</p>
+        </div>
+        <div class="music-grid" id="musicGrid">
+          <div class="loading">Loading…</div>
+        </div>
+      </div>
+    </section>
+
+<section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title"><span class="section-icon" aria-hidden="true">✉</span><span id="contactHeading">Contact</span></h2>
+        <p class="contact-line"><a class="email" id="contactEmail" href="mailto:proxydite@gmail.com">proxydite@gmail.com</a></p>
+        <p class="muted" id="contactNote">For commissions, collaborations, or just to say hello.</p>
+      </div>
+    </section>
+</main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year"></span> proxydite</p>
+      <p class="muted">Built as a small, editable single-page site. Update <code>content.json</code> (run a local server) or <code>content.js</code> (for file:// preview).</p>
+    </div>
+  </footer>
+
+  <!-- Theatre credits modal -->
+  <div class="modal" id="creditsModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="creditsTitle">
+      <div class="modal-head">
+        <h3 id="creditsTitle">Full theatre credits</h3>
+        <button class="icon-link" type="button" data-close aria-label="Close">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M18.3 5.7a1 1 0 0 0-1.4 0L12 10.6 7.1 5.7a1 1 0 0 0-1.4 1.4l4.9 4.9-4.9 4.9a1 1 0 1 0 1.4 1.4l4.9-4.9 4.9 4.9a1 1 0 0 0 1.4-1.4L13.4 12l4.9-4.9a1 1 0 0 0 0-1.4Z"/></svg>
+        </button>
+      </div>
+      <p class="muted" id="creditsNote"></p>
+      <div class="credits" id="creditsContent"></div>
+    </div>
+  </div>
+</body>
+</html>
