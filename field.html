@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a;
+            color: #c8c0b8;
+            font-family: 'Space Mono', 'Liberation Mono', monospace;
+            font-weight: 400;
+            font-size: clamp(13px, 1.8vw, 16px);
+            line-height: 1.95;
+            letter-spacing: 0.02em;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            z-index: 1000;
+        }
+
+        .story {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 15vh 24px 10vh 24px;
+        }
+
+        .story p {
+            margin-bottom: 1.6em;
+            opacity: 0;
+            animation: arrive 2s ease forwards;
+        }
+
+        .story p:nth-child(1)  { animation-delay: 0.5s; }
+        .story p:nth-child(2)  { animation-delay: 1.0s; }
+        .story p:nth-child(3)  { animation-delay: 1.5s; }
+        .story p:nth-child(4)  { animation-delay: 2.0s; }
+        .story p:nth-child(5)  { animation-delay: 2.5s; }
+        .story p:nth-child(6)  { animation-delay: 3.0s; }
+        .story p:nth-child(7)  { animation-delay: 3.5s; }
+        .story p:nth-child(8)  { animation-delay: 4.0s; }
+        .story p:nth-child(9)  { animation-delay: 4.5s; }
+        .story p:nth-child(10) { animation-delay: 5.0s; }
+        .story p:nth-child(11) { animation-delay: 5.5s; }
+
+        @keyframes arrive {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            bottom: -30%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120%;
+            height: 60%;
+            background: radial-gradient(ellipse at center, rgba(80, 20, 20, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        ::selection {
+            background: rgba(120, 40, 40, 0.4);
+            color: #e0d8d0;
+        }
+
+        .trigger {
+            display: block;
+            margin: 8vh auto 0 auto;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #3a3330;
+            border: none;
+            cursor: pointer;
+            opacity: 0;
+            animation: arrive 2s ease forwards;
+            animation-delay: 6.5s;
+            transition: background 0.5s ease;
+        }
+
+        .trigger:hover {
+            background: #6a4440;
+        }
+
+        .command {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            z-index: 500;
+        }
+
+        .placard {
+            background: #f0ece4;
+            padding: 48px 56px;
+            text-align: center;
+            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .placard span {
+            display: block;
+            font-family: Baskerville, 'Baskerville Old Face', 'Libre Baskerville', 'Times New Roman', serif;
+            font-weight: bold;
+            color: #0a0a0a;
+            font-size: clamp(36px, 8vw, 80px);
+            line-height: 1.05;
+            letter-spacing: 0.02em;
+        }
+
+        @media (max-width: 480px) {
+            .story {
+                padding: 10vh 20px 8vh 20px;
+            }
+
+            .placard {
+                padding: 32px 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="story" id="story">
+        <p>The first one appeared at the edge of the field where the pylons end and the salt marsh begins and the ever-loving, salt-lipped sea starts its old argument with the land. It was not tall. It was not short. It existed the way a low note exists. You felt it before you saw it.</p>
+
+        <p>It was made of light, or it carried light, or light had made a decision about it. This was not clear. The witnesses, of which there were only ever a few, and all of them damp, said it looked like it had always been there and they had only just turned around.</p>
+
+        <p>By morning there were others. They did not arrive. They were simply present. They stood at different angles to each other, not arranged but not random either. A gathering without an occasion. A congregation without a chapel. They did not speak. They did not move. But the light moved through them the way sun moves through a valley. Slowly, from one side to the other, revealing and then releasing. One would glow red for a long moment while the others stood dark. Then the colour would shift and find another. They took turns being visible. They took turns being.</p>
+
+        <p>A woman who had driven past on the coast road three times before stopping said they reminded her of people she had known but could not name. A boy on his way to nowhere in particular said they looked like they were waiting. A fisherman who had seen a great deal in his life, and had been rained on more than most, said nothing, but sat on the wall for a long time and did not leave. The gulls gave them a wide berth. This was noted. No one touched them. This was not discussed or agreed upon. It was simply understood&hellip;</p>
+
+        <p>At night, and the nights were long and wet and black as chapel cloth, they were harder to see but easier to feel. The darkness made them honest. Without colour they were just shape. The shape of someone, or the memory of the shape of someone. They stood in the black field and the black field held them and they held each other without touching. Above them, the rain held nothing at all except the sky's sadness at having to let it go.</p>
+
+        <p>There was talk of meaning. There is always talk of meaning. In the pub and on the hill and in the kitchens where the kettles never cool.</p>
+
+        <p>But meaning was not what they offered. What they offered was simpler and much older. They offered proof. Not of God, not of miracle, not of visitation. Proof of something prior to all of that. Proof that matter can know itself. Proof that light can choose where to fall. Proof that a small and imprecise thing can stand in a dark field and be, quietly and without explanation, enough.</p>
+
+        <p>They were there for three days. On the fourth morning the field was empty. The rain had come back. The sea had resumed its argument. The gulls had returned to their stations. The grass where they had stood was not burned or flattened or changed in any way. There was no evidence. But the light in the field fell differently after that. Not wrong. Just aware of where it was landing. And the people who had seen them carried something home that evening that they could not put down. It was not a memory. It was older than memory. It was the knowledge that the field had once been full, and that fullness does not end when the field empties.</p>
+
+        <p>The fisherman, who had still said nothing, walked to the edge of the field that evening. He stood for a while in the place where the first one had appeared. The sea was doing what the sea does. The light was leaving.</p>
+
+        <p>He looked down at his hands. They were the same hands. But the light passed through them differently now. He opened his mouth to say something, the first thing he would have said in days, and what fell out was not a word. It was a small wet piece of clay. It landed in the grass at his feet and it was warm and it was the exact colour of nothing and it lay there in the shape of something that had not yet decided what to be. He closed his mouth. He walked home. The field was empty. The field was full.</p>
+
+        <button class="trigger" id="trigger" aria-label="Continue"></button>
+    </div>
+
+    <div class="command" id="command">
+        <div class="placard">
+            <span>LOOK</span>
+            <span>DOWN</span>
+            <span>AT YOUR</span>
+            <span>HANDS</span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('trigger').addEventListener('click', function() {
+            document.getElementById('story').style.display = 'none';
+            var command = document.getElementById('command');
+            command.style.display = 'flex';
+            window.scrollTo(0, 0);
+        });
+    </script>
+</body>
+</html>
