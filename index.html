@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f0d0b">
+  <meta name="description" content="Ryan Samuel Davies is a Welsh artist working across video, sound, sculpture, painting and text, based in Abertawe.">
+
+  <meta property="og:title" content="proxydite — Ryan Samuel Davies">
+  <meta property="og:description" content="Welsh artist working across video, sound, sculpture, painting and text, based in Abertawe.">
+  <meta property="og:image" content="https://proxydite.net/assets/Home/hero.jpg">
+  <meta property="og:url" content="https://proxydite.net">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <title>proxydite</title>
+  <link rel="icon" href="assets/About/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,300&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="content.js"></script>
+  <script defer src="main.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- intro: plays once per session; removed entirely by main.js otherwise -->
+  <div id="intro" aria-hidden="true">
+    <div class="intro-shapes" id="introShapes" data-config="1">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="intro-text">
+      <div class="intro-word" id="introWord"></div>
+      <div class="intro-tag" id="introTag"></div>
+    </div>
+  </div>
+
+  <header>
+    <div class="brand">
+      <div class="wordmark" id="wordmark">proxydite</div>
+      <div class="tagline" id="tagline"></div>
+    </div>
+    <div class="hright">
+      <div class="socials" id="socials"></div>
+      <nav id="nav" aria-label="Primary"></nav>
+      <button id="menuToggle" aria-label="Open menu" aria-expanded="false">menu</button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="hero">
+      <img id="heroImg" src="assets/Home/hero.jpg" alt="" loading="eager" decoding="async">
+      <div class="hero-text">
+        <h1 id="heroName"></h1>
+        <p class="lead" id="heroLead"></p>
+      </div>
+    </div>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section id="projects">
+      <div class="container">
+        <h2 id="projectsHeading"></h2>
+        <div class="ptiles" id="projectTiles"></div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <div id="upcomingWrap" hidden>
+      <section id="upcoming">
+        <div class="container">
+          <h2 id="upcomingHeading"></h2>
+          <div id="upcomingList"></div>
+        </div>
+      </section>
+      <div class="divider" aria-hidden="true"></div>
+    </div>
+
+    <section id="about">
+      <div class="container">
+        <h2 id="aboutHeading"></h2>
+        <div class="statement" id="aboutBody"></div>
+        <ul class="bullets" id="aboutBullets"></ul>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section id="video">
+      <div class="container">
+        <h2 id="videoHeading"></h2>
+        <div id="videoSpotlight" style="margin-top:30px"></div>
+        <div class="pgrid cols2 vfeat" id="videoFeatured"></div>
+        <div class="carousel" data-carousel>
+          <div class="c-head">
+            <span class="c-count">1 / 1</span>
+            <span class="c-btns">
+              <button class="c-prev" aria-label="Previous">←</button>
+              <button class="c-next" aria-label="Next">→</button>
+            </span>
+          </div>
+          <div class="c-track" id="videoTrack"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section id="theatre">
+      <div class="container">
+        <h2 id="theatreHeading"></h2>
+        <div class="statement"><p id="theatreIntro"></p></div>
+        <div class="trow" id="theatreRow"></div>
+        <p class="note" id="theatreNote" style="margin-top:14px"></p>
+        <details class="fc">
+          <summary id="creditsSummary"></summary>
+          <div class="fc-groups" id="creditsGroups"></div>
+        </details>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section id="art">
+      <div class="container">
+        <h2 id="artHeading"></h2>
+        <div class="ptiles" id="artTiles"></div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- planned: Creative Technology. Unhidden by main.js when
+         creativeTech.enabled is true in content.js -->
+    <div id="creativetechWrap" hidden>
+      <section id="creativetech">
+        <div class="container">
+          <h2 id="ctHeading"></h2>
+          <div class="ptiles" id="ctTiles"></div>
+        </div>
+      </section>
+      <div class="divider" aria-hidden="true"></div>
+    </div>
+
+    <section id="music">
+      <div class="container">
+        <h2 id="musicHeading"></h2>
+        <div class="statement"><p id="musicIntro"></p></div>
+        <div class="bcgrid" id="musicGrid"></div>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section id="contact">
+      <div class="container">
+        <h2 id="contactHeading"></h2>
+        <a class="email" id="contactEmail" href="mailto:hello@proxydite.net"></a>
+        <p class="note" id="contactNote" style="margin-top:18px"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container"><p id="footerText"></p></div>
+  </footer>
+
+  <button id="toTop" aria-label="Return to top">↑ top</button>
+
+  <div class="mnav" id="mnav" role="dialog" aria-modal="true" aria-label="Menu">
+    <button class="mnav-close" id="mnavClose" aria-label="Close menu">×</button>
+    <nav id="mnavLinks" aria-label="Primary mobile"></nav>
+  </div>
+
+  <div class="panel" id="panel" role="dialog" aria-modal="true" aria-label="Details">
+    <button class="panel-close" id="panelClose" aria-label="Close panel">×</button>
+    <div class="panel-inner" id="panelInner"></div>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lb-btn lb-close" id="lbClose" aria-label="Close image">×</button>
+    <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous image">←</button>
+    <figure class="lb-stage">
+      <img id="lbImg" alt="">
+      <figcaption class="lb-meta"><span id="lbCount"></span><span id="lbCaption"></span></figcaption>
+    </figure>
+    <button class="lb-btn lb-next" id="lbNext" aria-label="Next image">→</button>
+  </div>
+
+  <noscript>
+    <p style="padding:2rem;font-family:monospace;color:#d8d0c3">
+      This site needs JavaScript to display its content.
+      Contact: hello@proxydite.net
+    </p>
+  </noscript>
+</body>
+</html>
