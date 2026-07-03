@@ -412,7 +412,6 @@ body.intro-lock { overflow: hidden; }
 @media (max-width: 620px) {
   .hright { flex-direction: row; align-items: center; gap: 16px; }
   #nav { display: none; }
-  #menuToggle { display: inline-block; }
   .lb-prev, .lb-next { position: fixed; bottom: 24px; z-index: 301; }
   .lb-prev { left: 24px; }
   .lb-next { left: 80px; }
@@ -469,3 +468,10 @@ a.up-title:hover { color: var(--clay); border-color: var(--clay); }
   transition: border-color .3s, color .3s;
 }
 .mnav-close:hover { border-color: var(--clay); color: var(--clay); }
+
+/* Mobile menu visibility. This must stay AFTER the #menuToggle base rule
+   above: equal specificity means source order decides, and media queries
+   do not add specificity. */
+@media (max-width: 620px) {
+  #menuToggle { display: inline-block; }
+}
