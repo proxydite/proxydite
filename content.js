@@ -182,6 +182,10 @@ window.SITE_CONTENT = {
       "Ryan Samuel Davies is a Welsh artist working across video, sound, sculpture, painting and text, based in Abertawe. His work is concerned with existence: the impulse to make, the materiality of being, and the continuity between ancient and digital acts of creation.",
       "A 2023 graduate of the Guildhall School of Music and Drama, he also designs video and sound for theatre across Wales and England."
     ],
+    commitment: {
+      heading: "A commitment to open practice.",
+      body: "I publish my code openly and share methods, documentation and source material where practical. Not every production asset can be hosted, but openness is the default."
+    },
     bullets: [
       "Video design & screen content for theatre",
       "Sound design / composition for performance and installation",

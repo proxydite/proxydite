@@ -414,6 +414,7 @@ const ICONS = {
 
   $("aboutHeading").textContent = C.about.heading;
   $("aboutBody").innerHTML = C.about.paragraphs.map((p) => `<p>${esc(p)}</p>`).join("");
+  $("aboutCommitment").innerHTML = `<h3>${esc(C.about.commitment.heading)}</h3><p>${esc(C.about.commitment.body)}</p>`;
   $("aboutBullets").innerHTML = C.about.bullets.map((b) => `<li>${esc(b)}</li>`).join("");
 
   /* ---------- video art ---------- */
