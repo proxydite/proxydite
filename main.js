@@ -335,6 +335,67 @@ const ICONS = {
     renderTileSection(C.creativeTech.groups, "ctTiles");
   }
 
+  /* ---------- featured live instrument (beneath the project tiles) ---------- */
+
+  /* An irregular trace, drawn from stacked sines so it reads as a signal
+     rather than a decoration. pathLength normalises it to 1000 units so the
+     stylesheet can dash and scroll it without knowing its real length. */
+  function wavePath(w, h) {
+    const pts = [];
+    for (let x = 0; x <= w; x += 4) {
+      const t = (x / w) * Math.PI * 2;
+      const y = h / 2
+        + Math.sin(t * 3) * (h * 0.26)
+        + Math.sin(t * 7.4 + 1.1) * (h * 0.11)
+        + Math.sin(t * 15.7 + 0.4) * (h * 0.05);
+      pts.push(x + "," + y.toFixed(1));
+    }
+    return "M" + pts.join(" L");
+  }
+
+  (function renderInstrument() {
+    const inst = C.projects && C.projects.instrument;
+    const mount = $("instrumentMount");
+    if (!mount || !inst || !inst.enabled) return;
+
+    const d = wavePath(600, 80);
+    const wave = `<span class="inst-wave" aria-hidden="true">
+        <svg viewBox="0 0 600 80" preserveAspectRatio="none">
+          <path class="w-base" d="${d}" pathLength="1000" fill="none" stroke="currentColor" stroke-width="1.1"/>
+          <path class="w-scan" d="${d}" pathLength="1000" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        </svg>
+      </span>`;
+
+    const stage = inst.embed
+      ? `<div class="inst-frame">
+           <iframe src="${attr(inst.url)}" title="${attr(inst.title)} — live"
+             loading="lazy" allow="geolocation; accelerometer; gyroscope; magnetometer; fullscreen"
+             referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>`
+      : `<a class="inst-launch" href="${attr(inst.url)}" target="_blank" rel="noopener">
+           ${wave}
+           <span class="inst-cta">▶ ${esc(inst.cta || "open")}</span>
+           ${inst.sub ? `<span class="inst-sub">${esc(inst.sub)}</span>` : ""}
+         </a>`;
+
+    mount.innerHTML = `
+      <section class="instrument${inst.embed ? " is-embed" : ""}" aria-labelledby="instTitle">
+        <div class="inst-rail">
+          <span class="inst-status"><span class="inst-led" aria-hidden="true"></span>${esc(inst.status || "live")}</span>
+          <span class="inst-host">${esc(inst.host || "")}</span>
+        </div>
+        <div class="inst-body">
+          <div class="inst-text">
+            <h3 class="inst-title" id="instTitle">${esc(inst.title)}</h3>
+            <div class="inst-lines">${(inst.lines || []).map((l) => `<p class="inst-line">${esc(l)}</p>`).join("")}</div>
+            ${inst.blurb ? `<p class="inst-blurb">${esc(inst.blurb)}</p>` : ""}
+            ${inst.embed ? `<div class="plinks"><a href="${attr(inst.url)}" target="_blank" rel="noopener">→ ${esc(inst.cta || "open")}</a></div>` : ""}
+          </div>
+          <div class="inst-stage">${stage}</div>
+        </div>
+      </section>`;
+  })();
+
   /* ---------- upcoming ---------- */
 
   if (C.upcoming && C.upcoming.items && C.upcoming.items.length) {

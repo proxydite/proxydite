@@ -119,7 +119,31 @@ window.SITE_CONTENT = {
           ]
         }
       }
-    ]
+    ],
+
+    /* Featured live work, rendered full width beneath the project tiles.
+       Deliberately heavier than a third tile: a chassis frame with a
+       status rail and a launch control, in the same language as the tiles.
+
+       embed: true replaces the launch panel with the app running live and
+       inline. Left false for now because the running app carries branding
+       that is not yet public; set it to true once that is announced. */
+    instrument: {
+      enabled: true,
+      embed: false,
+      status: "live",
+      title: "Grid Pulse",
+      host: "grid-pulse.github-02d.workers.dev",
+      url: "https://grid-pulse.github-02d.workers.dev/",
+      /* Rendered uppercase in mono by the stylesheet, like every caption. */
+      lines: [
+        "Field Instrument 01. Abertawe / 2026",
+        "As part of Studies for a Loving Machine"
+      ],
+      blurb: "A continuous instrument played by grid frequency, regional carbon intensity and the electrical infrastructure around you. It runs in the browser: open it and it starts listening.",
+      cta: "run the instrument",
+      sub: "opens in a new tab"
+    }
   },
 
   /* Light, text-only section between Ongoing Projects and About.
@@ -133,6 +157,13 @@ window.SITE_CONTENT = {
         venue: "Opera Holland Park",
         when: "August 2026",
         url: "https://operahollandpark.com/productions/opera-prelude-trouble-in-tahiti-seven-deadly-sins/"
+      },
+      {
+        title: "5th World Congress of Psychogeography",
+        role: "Installation & Talk",
+        venue: "Urban HQ",
+        when: "September 2026",
+        url: "https://5wcop.org/"
       },
       {
         title: "Tomorrow Town",

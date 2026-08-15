@@ -28,6 +28,17 @@ Preview locally by opening `index.html` in a browser (double-clicking works, no 
 
 Nothing outstanding. All videos are live and self-hosted with posters in `assets/video/posters/`. If a future piece isn't ready, add its entry with `pending: true` and it will show a labelled placeholder until you remove the flag.
 
+## Featured instrument (Grid Pulse)
+
+The bordered chassis under the Ongoing Projects tiles. It is a full-width feature rather than a third tile, so a live piece outweighs the portfolio entries without a redesign. Edit the `instrument` block inside `projects` in `content.js`; set `enabled: false` to remove it entirely.
+
+Two display modes:
+
+- `embed: false` (current) — a launch panel: an animated signal trace behind a "run the instrument" control that opens the app in a new tab.
+- `embed: true` — the app itself, running live and inline in a 16:10 frame, with the launch link moved beside the text.
+
+**It is currently `false` on purpose.** The running app shows branding in its own masthead that is not yet public, and an inline frame would put that on the homepage. Flip the flag once that is announced; the embed path is built and works.
+
 ## Upcoming section
 
 The light text-only section between Ongoing Projects and About. Edit the `upcoming` block in `content.js`: each item takes a title, optional `by`, role, venue, `when`, and an optional URL. Empty the items list and the whole section (and its divider) hides itself.
