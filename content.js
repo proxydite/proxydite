@@ -36,6 +36,7 @@ window.SITE_CONTENT = {
     { label: "video art", to: "#video" },
     { label: "theatre",   to: "#theatre" },
     { label: "art",       to: "#art" },
+    { label: "creative technology", to: "#creativetech" },
     { label: "music",     to: "#music" },
     { label: "contact",   to: "#contact" }
   ],
@@ -50,49 +51,9 @@ window.SITE_CONTENT = {
     heading: "Ongoing Projects",
     items: [
       {
-        id: "ycynfod",
-        title: "Y Cynfod",
-        cta: "enter the project →",
-        tile: { src: "assets/Art/Y Cynfod/YCynfod.jpg", alt: "Small pale clay figures standing in near-darkness under blue projected light" },
-        panel: {
-          meta: "First exhibited in Shades of Existence · Elysium Gallery, Abertawe · 26 June – 5 July 2026 · Curated by Hannah Jones",
-          blocks: [
-            { type: "paras", items: [
-              "Y Cynfod is Welsh for \"the before-beings\". The name refers to a state that exists before identity: before a body has a face, a history or a name. Y Cynfod are faceless clay figures representing matter at the point before it becomes a person, standing for existence itself rather than any individual. Across the three works in this exhibition, they appear in different states."
-            ]},
-            { type: "grid", cols: 3, items: [
-              { kind: "image", src: "assets/Art/Y Cynfod/WeWereHere_1.jpg", alt: "We Were Here, clay figures with projection, view one", ratio: "r43" },
-              { kind: "image", src: "assets/Art/Y Cynfod/WeWereHere_2.jpg", alt: "We Were Here, clay figures with projection, view two", ratio: "r43" },
-              { kind: "image", src: "assets/Art/Y Cynfod/WeWereHere_3.jpg", alt: "We Were Here, clay figures with projection, view three", ratio: "r43" }
-            ]},
-            { type: "media", item: {
-              kind: "video",
-              src: "assets/video/wewerehere.mp4",
-              poster: "assets/video/posters/wewerehere.jpg",
-              title: "We Were Here · moving image",
-              note: "assets/video/wewerehere.mp4 · self-hosted"
-            }},
-            { type: "grid", cols: 2, items: [
-              { kind: "video",
-                src: "assets/video/smallfires.mp4",
-                poster: "assets/video/posters/smallfires.jpg",
-                title: "smallfires",
-                caption: "smallfires. Single-channel video for CRT, stereo audio. 2026." },
-              { kind: "image",
-                src: "assets/Art/Y Cynfod/instructionsforcontainment_ycynfod.jpg",
-                alt: "Instructions for Containment, photographed in the exhibition",
-                ratio: "r169",
-                caption: "Instructions for Containment. 18 × 24 in. Acrylic on canvas. 2026." }
-            ]},
-            { type: "links", items: [
-              { label: "→ y stori · read the short story", url: "field.html" }
-            ]}
-          ]
-        }
-      },
-      {
         id: "sfalm",
         title: "Studies for a Loving Machine",
+        featured: true,
         cta: "enter the project →",
         tile: { src: "assets/Art/Studies for a Loving Machine/SFaLM.jpg", alt: "Diagram on orange fabric: System and Behaviour connected by a waveform" },
         panel: {
@@ -152,13 +113,6 @@ window.SITE_CONTENT = {
     heading: "Upcoming",
     items: [
       {
-        title: "Trouble in Tahiti / The Seven Deadly Sins",
-        role: "Video Designer",
-        venue: "Opera Holland Park",
-        when: "August 2026",
-        url: "https://operahollandpark.com/productions/opera-prelude-trouble-in-tahiti-seven-deadly-sins/"
-      },
-      {
         title: "5th World Congress of Psychogeography",
         role: "Installation & Talk",
         venue: "Urban HQ",
@@ -166,7 +120,7 @@ window.SITE_CONTENT = {
         url: "https://5wcop.org/"
       },
       {
-        title: "Tomorrow Town",
+        title: "Tomorrowtown",
         by: "by Mabli Leonard",
         role: "Creative Designer",
         venue: "Volcano Theatre",
@@ -227,10 +181,18 @@ window.SITE_CONTENT = {
       { img: "assets/Theatre/BMFN.jpg",        title: "Ble Mae Fy Nghartref", year: "2025", role: "Lighting, Sound and Video Designer", venue: "Volcano Theatre", text: "Based on a true story by Eric Ngalle Charles. A new collaboration between Eric Ngalle Charles and Volcano.", url: "https://volcanotheatre.wales/bmfn/" },
       { img: "assets/Theatre/snre.JPG",        title: "Silent Night, Raging Eve", year: "2025", role: "Lighting, Sound and Video Designer", venue: "Volcano Theatre", text: "Lighting, sound and video design for Volcano Theatre.", url: "https://volcanotheatre.wales/silent-night-raging-eve/" },
       { img: "assets/Theatre/hungergames.jpg", title: "The Hunger Games On Stage", year: "2025", role: "Animator", venue: "Troubadour Theatre, Canary Wharf", text: "Animator for screen content, working for Video Designer Tal Rosner.", url: "https://thehungergamesonstage.com" },
-      { img: "assets/Theatre/wtfigo1.jpeg",    title: "what the fuck is going on? (or how I see things)", year: "2025", role: "Video Designer, writer & performer", venue: "Volcano Theatre", text: "Commissioned by Volcano Theatre. Video design, writing and performance.", url: "https://volcanotheatre.wales" },
+      { img: "assets/Theatre/wtfigo1.jpeg",    title: "what the fuck is going on? (or how I see things)", year: "2025", role: "Writer, performer, composer & Video Designer", venue: "Volcano Theatre", text: "A solo authored work commissioned by Volcano Theatre, bringing together performance, projection, sound, composition and personal research. Written, performed, scored and designed by Ryan Samuel Davies.", url: "https://volcanotheatre.wales", images: [
+        { src: "assets/Theatre/wtfigo2.jpeg", alt: "what the fuck is going on? production still with projected face", ratio: "r169" }
+      ]},
       { img: "assets/Theatre/ykmm.jpg",        title: "You Know My Mum", year: "2025", role: "Associate Video Designer", venue: "Belgrade Theatre, Coventry & National Tour", text: "Working for Video Designer Hayley Egan.", url: "https://www.belgrade.co.uk/events/you-know-my-mum/" },
-      { img: "assets/Theatre/iphigenia.jpg",   title: "Iphigenia Yn Sblot", year: "2024", role: "Video Designer", venue: "Sherman Theatre", text: "Welsh language premiere.", url: "https://www.shermantheatre.co.uk" },
-      { img: "assets/Theatre/opera.jpg",       title: "Opera Triple Bill", year: "2022", role: "Video Designer", venue: "Silk Street Theatre, Barbican", text: "Video design for the Guildhall School opera triple bill.", url: "https://www.barbican.org.uk/whats-on" }
+      { img: "assets/Theatre/iphigenia.jpg",   title: "Iphigenia Yn Sblot", year: "2024", role: "Video Designer", venue: "Sherman Theatre", text: "Welsh language premiere.", url: "https://www.shermantheatre.co.uk", images: [
+        { src: "assets/Theatre/iphigenia/iphigenia4.jpg", alt: "Iphigenia Yn Sblot production still: performer seated beside a mattress and chair", ratio: "r169" },
+        { src: "assets/Theatre/iphigenia/iphigenia5.jpg", alt: "Iphigenia Yn Sblot production still: performer in projected light", ratio: "r169" }
+      ]},
+      { img: "assets/Theatre/opera.jpg",       title: "Opera Triple Bill", year: "2022", role: "Video Designer", venue: "Silk Street Theatre", text: "Guildhall School's Opera department presented works by Massenet, Smyth and Rota in a triple bill exploring love and identity. Ryan Samuel Davies was Video Designer.", url: "https://www.gsmd.ac.uk/opera-triple-bill-november-2022", images: [
+        { src: "assets/Theatre/guildhallopera/opera3.jpeg", alt: "Opera Triple Bill production still with projected clown image", ratio: "r169" },
+        { src: "assets/Theatre/guildhallopera/opera4.jpeg", alt: "Opera Triple Bill production still at La Scala Picturehouse", ratio: "r169" }
+      ]}
     ],
     credits: {
       heading: "Full credits",
@@ -240,7 +202,7 @@ window.SITE_CONTENT = {
           { title: "Silent Night, Raging Eve", url: "https://volcanotheatre.wales/silent-night-raging-eve/", context: "Volcano Theatre" }
         ]},
         { role: "Video Designer", items: [
-          { title: "what the fuck is going on?", url: "https://volcanotheatre.wales/shape25/", context: "Volcano Theatre · also writer & performer" },
+          { title: "what the fuck is going on?", url: "https://volcanotheatre.wales/shape25/", context: "Volcano Theatre · writer, performer, composer & Video Designer" },
           { title: "Reykjavik", url: "https://www.hampsteadtheatre.co.uk/whats-on/reykjavik/", context: "Hampstead Theatre" },
           { title: "Iphigenia Yn Sblot", url: "https://www.shermantheatre.co.uk/event/iphigenia-yn-sblot/", context: "Sherman Theatre" },
           { title: "Succession Theme is my Ringtone", url: "https://www.rosetheatre.org/whats-on/succession-theme-is-my-ringtone/", context: "Rose Theatre Kingston" },
@@ -251,7 +213,7 @@ window.SITE_CONTENT = {
           { title: "Attempts on Her Life", url: "https://www.barbican.org.uk/whats-on/2024/event/attempts-on-her-life", context: "Guildhall School of Music and Drama" },
           { title: "Cabaret Boheme", url: "https://www.thebohemianstheatre.com/cabaret-boheme", context: "Union Theatre" },
           { title: "Macbeth", url: "https://www.barbican.org.uk/whats-on/2024/event/macbeth", context: "Guildhall School of Music and Drama" },
-          { title: "Opera Triple Bill", url: "https://www.barbican.org.uk/whats-on", context: "Guildhall School of Music and Drama" }
+          { title: "Opera Triple Bill", url: "https://www.gsmd.ac.uk/opera-triple-bill-november-2022", context: "Guildhall School of Music and Drama" }
         ]},
         { role: "Associate Video Designer", items: [
           { title: "You Know My Mum", url: "https://www.belgrade.co.uk/events/you-know-my-mum/", context: "Video Designer: Hayley Egan" }
@@ -263,7 +225,7 @@ window.SITE_CONTENT = {
           { title: "The Lesson", url: "https://www.icarustheatre.co.uk/the-lesson", context: "Southwark Playhouse & Tour" }
         ]},
         { role: "Digital Associate", items: [
-          { title: "This Incredible Life", url: "https://www.ambobdim.cymru/en/profile-content/this-incredible-life/", context: "Online" }
+          { title: "This Incredible Life", url: "https://www.ambobdim.cymru/en/profile-content/this-incredible-life/", context: "Canoe Theatre · Digital Production (2020)" }
         ]},
         { role: "Designer", items: [
           { title: "SIMUL", url: "", context: "Virtual Reality" }
@@ -276,17 +238,110 @@ window.SITE_CONTENT = {
           { title: "Scissorhandz", url: "https://www.scissorhandzthemusical.com", context: "Musical" }
         ]},
         { role: "Assistant Director", items: [
-          { title: "This Incredible Life", url: "https://asiw.co.uk/reviews/this-incredible-life-canoe-theatre-theatrau-sir-gar-chapter", context: "" }
+          { title: "This Incredible Life", url: "https://asiw.co.uk/reviews/this-incredible-life-canoe-theatre-theatrau-sir-gar-chapter", context: "Canoe Theatre · National Tour (2018)" }
         ]}
       ]
     }
   },
 
-  /* Painting and Digital Art, grouped as tiles that open panels,
-     the same interaction as Ongoing Projects. */
+  /* Installation work is accessed from the Art section as a small in-page
+     collection, keeping the homepage surface deliberately concise. */
+  installations: {
+    items: [
+      {
+        id: "ycynfod",
+        title: "Y Cynfod",
+        featured: true,
+        cta: "enter the project →",
+        tile: { src: "assets/Art/Y Cynfod/YCynfod.jpg", alt: "Small pale clay figures standing in near-darkness under blue projected light" },
+        panel: {
+          meta: "First exhibited in Shades of Existence · Elysium Gallery, Abertawe · 26 June – 5 July 2026 · Curated by Hannah Jones",
+          blocks: [
+            { type: "paras", items: [
+              "Y Cynfod is Welsh for \"the before-beings\". The name refers to a state that exists before identity: before a body has a face, a history or a name. Y Cynfod are faceless clay figures representing matter at the point before it becomes a person, standing for existence itself rather than any individual. Across the three works in this exhibition, they appear in different states."
+            ]},
+            { type: "grid", cols: 3, items: [
+              { kind: "image", src: "assets/Art/Y Cynfod/WeWereHere_1.jpg", alt: "We Were Here, clay figures with projection, view one", ratio: "r43" },
+              { kind: "image", src: "assets/Art/Y Cynfod/WeWereHere_2.jpg", alt: "We Were Here, clay figures with projection, view two", ratio: "r43" },
+              { kind: "image", src: "assets/Art/Y Cynfod/WeWereHere_3.jpg", alt: "We Were Here, clay figures with projection, view three", ratio: "r43" }
+            ]},
+            { type: "media", item: {
+              kind: "video",
+              src: "assets/video/wewerehere.mp4",
+              poster: "assets/video/posters/wewerehere.jpg",
+              title: "We Were Here · moving image",
+              note: "assets/video/wewerehere.mp4 · self-hosted"
+            }},
+            { type: "grid", cols: 2, items: [
+              { kind: "video",
+                src: "assets/video/smallfires.mp4",
+                poster: "assets/video/posters/smallfires.jpg",
+                title: "smallfires",
+                caption: "smallfires. Single-channel video for CRT, stereo audio. 2026." },
+              { kind: "image",
+                src: "assets/Art/Y Cynfod/instructionsforcontainment_ycynfod.jpg",
+                alt: "Instructions for Containment, photographed in the exhibition",
+                ratio: "r169",
+                caption: "Instructions for Containment. 18 × 24 in. Acrylic on canvas. 2026." }
+            ]},
+            { type: "links", items: [
+              { label: "→ y stori · read the short story", url: "field.html" }
+            ]}
+          ]
+        }
+      },
+      {
+        id: "rhyddid",
+        title: "Rhyddid",
+        cta: "enter the project →",
+        tile: { src: "assets/Installation/rhyddid.jpg", alt: "Rhyddid installation with audience facing a projected image" },
+        panel: {
+          meta: "2021 · Interactive projection installation · Guildhall School of Music & Drama, London",
+          blocks: [
+            { type: "paras", items: [ "An interactive projection installation combining a suspended wooden map of Wales with fragments of Welsh history. Audience interaction influenced the material encountered, bringing physical structure, projection and participation into a shared spatial experience." ]},
+            { type: "grid", cols: 3, items: [
+              { kind: "image", src: "assets/Installation/rhyddid.jpg", alt: "Audience facing the Rhyddid installation", ratio: "r43" },
+              { kind: "image", src: "assets/Installation/Rhyddid/cutting2.jpg", alt: "Rhyddid fabrication drawing over plywood in the workshop", ratio: "r43" },
+              { kind: "image", src: "assets/Installation/Rhyddid/previs2.jpg", alt: "Rhyddid previsualisation of projected form", ratio: "r43" }
+            ]}
+          ]
+        }
+      },
+      {
+        id: "simul",
+        title: "SIMUL",
+        cta: "enter the project →",
+        tile: { src: "assets/Installation/SIMUL/simul1.jpg", alt: "Participant using a VR headset for SIMUL" },
+        panel: {
+          meta: "2022 · Virtual reality experience · Guildhall School of Music & Drama, London",
+          blocks: [
+            { type: "paras", items: [ "An immersive virtual reality experience exploring calm, presence and user input through a responsive digital environment." ]},
+            { type: "grid", cols: 3, items: [
+              { kind: "image", src: "assets/Installation/SIMUL/simul1.jpg", alt: "Participant using a VR headset for SIMUL", ratio: "r43" },
+              { kind: "image", src: "assets/Installation/SIMUL/simul4.jpg", alt: "Virtual landscape from the SIMUL VR experience", ratio: "r43" },
+              { kind: "image", src: "assets/Installation/SIMUL/simul6.jpg", alt: "SIMUL virtual environment shown on a laptop", ratio: "r43" }
+            ]}
+          ]
+        }
+      }
+    ]
+  },
+
+  /* Painting, Digital Art and Installations share the same tile convention. */
   art: {
     heading: "Art",
     groups: [
+      {
+        id: "installations",
+        title: "Installations",
+        featured: true,
+        cta: "view the work →",
+        tile: { src: "assets/Art/Y Cynfod/YCynfod.jpg", alt: "Small pale clay figures standing in near-darkness under blue projected light" },
+        panel: {
+          meta: "Selected installation work",
+          blocks: [{ type: "installationOverview" }]
+        }
+      },
       {
         id: "painting",
         title: "Painting",
@@ -348,36 +403,51 @@ window.SITE_CONTENT = {
     ]
   },
 
-  /* Planned, not yet live. Set enabled: true and add
-     { label: "creative technology", to: "#creativetech" } to nav when ready. */
+  /* Creative technology work. Project tiles are concise;
+     documentation remains inside the existing in-page project panel. */
   creativeTech: {
-    enabled: false,
+    enabled: true,
     heading: "Creative Technology",
     groups: [
       {
         id: "telephonebooth",
-        title: "Telephone Booth",
+        title: "Volcano Telephone Booths",
         cta: "enter the project →",
-        tile: null,
+        tile: { src: "assets/Creative Technology/Volcano Telephone Booth/telephone-booth-use.jpg", alt: "Visitor using a tin-can telephone inside a yellow telephone booth" },
         panel: {
-          meta: "Interactive installation · Volcano Theatre",
+          meta: "Creative technology · Interactive audio system · Volcano Theatre",
           blocks: [
             { type: "paras", items: [
-              "A Discord-based tin-can communication system built for Volcano. Text to come."
-            ]}
+              "A networked audio system connecting a tin-can contact microphone and telephone booth through a Focusrite interface, ThinkPad and Discord. The installation combined an intentionally simple physical interface with contemporary networked communication technology."
+            ]},
+            { type: "grid", cols: 2, items: [
+              { kind: "image", src: "assets/Creative Technology/Volcano Telephone Booth/telephone-booth-interior.jpeg", alt: "Tin-can telephone and contact microphone installed inside the yellow telephone booth", ratio: "r43" },
+              { kind: "image", src: "assets/Creative Technology/Volcano Telephone Booth/telephone-booth-use.jpg", alt: "Visitor using the tin-can telephone inside the yellow telephone booth", ratio: "r43" }
+            ]},
+            { type: "media", item: {
+              kind: "image", src: "assets/Creative Technology/Volcano Telephone Booth/volcano-system.svg",
+              alt: "System diagram: contact microphone on tin can into Focusrite audio interface; bidirectional audio connection to ThinkPad X270 running Discord; Focusrite output to soundbar in the telephone booth.",
+              natural: true,
+              caption: "System diagram."
+            }}
           ]
         }
       },
       {
-        id: "renderlauncher",
-        title: "Blender Render Launcher",
-        cta: "view the tool →",
-        tile: null,
+        id: "co2yellow",
+        title: "Theatr Iolo R&D",
+        cta: "enter the project →",
+        tile: { src: "assets/Creative Technology/CO2 Yellow R&D/co2-yellow-rd-notes.jpg", alt: "Participants discussing handwritten R&D notes" },
         panel: {
-          meta: "Open-source desktop tool · Pop!_OS / Linux",
+          meta: "2026 · Creative Technologist · Theatr Iolo",
           blocks: [
-            { type: "paras", items: [ "A GTK desktop application for queueing and launching Blender renders. Text to come." ]},
-            { type: "links", items: [ { label: "→ GitHub", url: "https://github.com/proxydite/blender-render-launcher" } ]}
+            { type: "paras", items: [ "Creative technology R&D for Theatr Iolo exploring the integration of RFID and NFC technology into production and video design." ]},
+            { type: "grid", cols: 3, items: [
+              { kind: "image", src: "assets/Creative Technology/CO2 Yellow R&D/co2-yellow-rd-workshop.jpg", alt: "Participants gathered around a table during an R&D workshop", ratio: "r43" },
+              { kind: "image", src: "assets/Creative Technology/CO2 Yellow R&D/co2-yellow-rd-notes.jpg", alt: "Participants discussing handwritten R&D notes", ratio: "r43" },
+              { kind: "image", src: "assets/Creative Technology/CO2 Yellow R&D/co2-yellow-rd-prototype.jpg", alt: "Prototype technology in use during R&D", ratio: "r43" }
+            ]},
+            { type: "credit", text: "Photography: Theatr Iolo." }
           ]
         }
       }

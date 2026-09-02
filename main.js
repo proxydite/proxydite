@@ -103,8 +103,32 @@
           .map((l) => `<a href="${attr(l.url)}">${esc(l.label)}</a>`)
           .join("")}</div>`;
       }
+      if (b.type === "credit") {
+        return `<p class="caption pcredit">${esc(b.text)}</p>`;
+      }
+      if (b.type === "installationOverview") {
+        const items = (C.installations && C.installations.items) || [];
+        return `<div class="ptiles installation-overview">${items.map((p) => `
+          <button class="ptile${p.featured ? " featured" : ""}" data-installation-id="${attr(p.id)}">
+            ${tileImage(p)}
+            ${tileLabel(p)}
+          </button>`).join("")}</div>`;
+      }
       return "";
     }).join("");
+  }
+
+  function tileImage(p) {
+    return (p.tile && p.tile.src)
+      ? `<img src="${attr(p.tile.src)}" alt="${attr(p.tile.alt || p.title)}" loading="lazy" decoding="async">`
+      : `<span class="ph tileph"><span class="t">${esc(p.title)}</span><span class="f">image to come</span></span>`;
+  }
+
+  function tileLabel(p) {
+    return `<span class="pt-label">
+      <span class="pt-title">${esc(p.title)}</span>
+      <span class="pt-cta">${esc(p.cta || "enter the project →")}</span>
+    </span>`;
   }
 
   /* ---------- panel ---------- */
@@ -114,8 +138,15 @@
   const panelClose = $("panelClose");
   let lastFocus = null;
 
-  function openPanel(html) {
-    lastFocus = document.activeElement;
+  function panelContent(p, withInstallationBack) {
+    return `${withInstallationBack ? '<button class="panel-back" type="button" data-installation-back>← installations</button>' : ""}
+      <h3>${esc(p.title)}</h3>
+      ${p.panel.meta ? `<p class="pmeta">${esc(p.panel.meta)}</p>` : ""}
+      ${renderBlocks(p.panel.blocks)}`;
+  }
+
+  function openPanel(html, { preserveFocus = false } = {}) {
+    if (!preserveFocus) lastFocus = document.activeElement;
     panelInner.innerHTML = html;
     [...panelInner.children].forEach((el, i) => {
       el.classList.add("arrive");
@@ -124,6 +155,7 @@
     panel.classList.add("open");
     document.body.style.overflow = "hidden";
     panel.scrollTop = 0;
+    bindPanelActions();
     collectGallery();
     panelClose.focus();
   }
@@ -131,7 +163,24 @@
   function closePanel() {
     panel.classList.remove("open");
     document.body.style.overflow = "";
-    if (lastFocus) lastFocus.focus();
+    if (lastFocus && lastFocus.isConnected) lastFocus.focus();
+  }
+
+  function openInstallationOverview() {
+    const entry = (C.art.groups || []).find((p) => p.id === "installations");
+    if (entry) openPanel(panelContent(entry), { preserveFocus: true });
+  }
+
+  function bindPanelActions() {
+    panelInner.querySelectorAll("[data-installation-id]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const project = ((C.installations && C.installations.items) || [])
+          .find((p) => p.id === button.dataset.installationId);
+        if (project) openPanel(panelContent(project, true), { preserveFocus: true });
+      });
+    });
+    const back = panelInner.querySelector("[data-installation-back]");
+    if (back) back.addEventListener("click", openInstallationOverview);
   }
 
   panelClose.addEventListener("click", closePanel);
@@ -150,7 +199,8 @@
 
   function collectGallery() {
     gallery = [];
-    const imgs = [...panelInner.querySelectorAll("img")];
+    const imgs = [...panelInner.querySelectorAll("img")]
+      .filter((img) => !img.closest("[data-installation-id]"));
     imgs.forEach((img, i) => {
       const fig = img.closest("figure");
       const cap = fig ? fig.querySelector(".caption") : null;
@@ -303,21 +353,10 @@ const ICONS = {
     const mount = $(mountId);
     (items || []).forEach((p) => {
       const b = document.createElement("button");
-      b.className = "ptile";
-      const imgHtml = (p.tile && p.tile.src)
-        ? `<img src="${attr(p.tile.src)}" alt="${attr(p.tile.alt || p.title)}" loading="lazy" decoding="async">`
-        : `<span class="ph tileph"><span class="t">${esc(p.title)}</span><span class="f">image to come</span></span>`;
-      b.innerHTML = `${imgHtml}
-        <span class="pt-label">
-          <span class="pt-title">${esc(p.title)}</span>
-          <span class="pt-cta">${esc(p.cta || "enter the project →")}</span>
-        </span>`;
+      b.className = "ptile" + (p.featured ? " featured" : "");
+      b.innerHTML = `${tileImage(p)}${tileLabel(p)}`;
       b.addEventListener("click", () => {
-        openPanel(`
-          <h3>${esc(p.title)}</h3>
-          ${p.panel.meta ? `<p class="pmeta">${esc(p.panel.meta)}</p>` : ""}
-          ${renderBlocks(p.panel.blocks)}
-        `);
+        openPanel(panelContent(p));
       });
       mount.appendChild(b);
     });
@@ -442,11 +481,13 @@ const ICONS = {
     const b = document.createElement("button");
     b.innerHTML = `<img src="${attr(t.img)}" alt="${attr(t.title)}" loading="lazy" decoding="async"><span class="lbl">${esc(t.title)}</span>`;
     b.addEventListener("click", () => {
+      const supplementaryImages = (t.images || []).map((image) => media({ kind: "image", ...image }, image.ratio || "r169")).join("");
       openPanel(`
         <h3>${esc(t.title)}</h3>
         <p class="pmeta">${esc(t.role)} · ${esc(t.venue)} · ${esc(t.year)}</p>
         <div class="ptext"><p>${esc(t.text)}</p></div>
         <div class="pwide"><figure class="media"><div class="imgframe r169"><img src="${attr(t.img)}" alt="${attr(t.title)}" loading="lazy"></div></figure></div>
+        ${supplementaryImages ? `<div class="pgrid cols2 theatre-media">${supplementaryImages}</div>` : ""}
         ${t.url ? `<div class="plinks"><a href="${attr(t.url)}" target="_blank" rel="noopener">→ production page</a></div>` : ""}
       `);
     });
