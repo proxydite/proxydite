@@ -113,13 +113,6 @@ window.SITE_CONTENT = {
     heading: "Upcoming",
     items: [
       {
-        title: "5th World Congress of Psychogeography",
-        role: "Installation & Talk",
-        venue: "Urban HQ",
-        when: "September 2026",
-        url: "https://5wcop.org/"
-      },
-      {
         title: "Tomorrowtown",
         by: "by Mabli Leonard",
         role: "Creative Designer",
