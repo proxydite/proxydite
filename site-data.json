@@ -1,0 +1,1409 @@
+{
+  "projects": [
+    {
+      "slug": "y-cynfod",
+      "title": "Y Cynfod",
+      "year": "2026",
+      "category": "Installation",
+      "role": "Artist",
+      "venue": "Elysium College Street Gallery, Abertawe",
+      "summary": "A gathering of faceless clay figures, given shifting presence by projected light and sound. Y Cynfod follows the impulse to make, from clay and fire to paint and code, and asks what it means for matter to become aware of itself.",
+      "cover": {
+        "src": "assets/Art/Y Cynfod/WeWereHere_3.jpg",
+        "alt": "We Were Here: clay figures with projected light"
+      },
+      "meta": "Shades of Existence · 26 June–5 July 2026 · Curated by Hannah Jones",
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "Y Cynfod, the before-beings, are faceless clay figures poised at the threshold of becoming a person. Their uneven bodies retain the marks of making; their lack of features leaves identity open. They give a human shape to a question that runs through the project: how does matter come to recognise itself?",
+            "Developed for Shades of Existence at Elysium Gallery, the work brings clay, projection, moving image, sound, painting and storytelling into a shared world. In We Were Here, projected colour finds the figures and moves on, changing their visibility without removing their presence. The CRT video smallfires imagines their origin through fire, light and sound. Paintings and a short story carry that world beyond the installation.",
+            "At its centre is a continuity between old and new ways of making. Shaping clay, tending fire, painting a figure and writing code all begin with the desire to give form to something felt. The project approaches existence through warmth, attention and the traces people leave: an invitation to spend time with these small presences, and to recognise something of our own unfinishedness in them."
+          ]
+        },
+        {
+          "type": "grid",
+          "cols": 3,
+          "items": [
+            {
+              "kind": "image",
+              "src": "assets/Art/Y Cynfod/WeWereHere_1.jpg",
+              "alt": "We Were Here, clay figures with projection, view one",
+              "ratio": "r43"
+            },
+            {
+              "kind": "image",
+              "src": "assets/Art/Y Cynfod/WeWereHere_2.jpg",
+              "alt": "We Were Here, clay figures with projection, view two",
+              "ratio": "r43"
+            },
+            {
+              "kind": "image",
+              "src": "assets/Art/Y Cynfod/WeWereHere_3.jpg",
+              "alt": "We Were Here, clay figures with projection, view three",
+              "ratio": "r43"
+            }
+          ]
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "video",
+            "src": "assets/video/wewerehere.mp4",
+            "poster": "assets/video/posters/wewerehere.jpg",
+            "title": "We Were Here · moving image",
+            "note": "assets/video/wewerehere.mp4 · self-hosted"
+          }
+        },
+        {
+          "type": "grid",
+          "cols": 2,
+          "items": [
+            {
+              "kind": "video",
+              "src": "assets/video/smallfires.mp4",
+              "poster": "assets/video/posters/smallfires.jpg",
+              "title": "smallfires",
+              "caption": "smallfires. Single-channel video for CRT, stereo audio. 2026."
+            },
+            {
+              "kind": "image",
+              "src": "assets/Art/Y Cynfod/instructionsforcontainment_ycynfod.jpg",
+              "alt": "Instructions for Containment, photographed in the exhibition",
+              "ratio": "r169",
+              "caption": "Instructions for Containment. 18 × 24 in. Acrylic on canvas. 2026."
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Y Cynfod · read the short story",
+              "url": "field.html"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "shape-of-things-to-come-2026",
+      "title": "The Shape of Things to Come",
+      "subtitle": "Autumn 2026",
+      "year": "2026",
+      "category": "Theatre",
+      "role": "Lighting, sound & video design",
+      "venue": "Volcano Theatre, Abertawe",
+      "summary": "Lighting, sound and video design for a season of new performances, each shaped through collaboration with a different artist.",
+      "cover": {
+        "src": "assets/new/shape/angharad-outside.jpg",
+        "alt": "View from the street through a large window, with audiences inside and outside watching a winged performer in a pale set under cool light.",
+        "caption": "If You Had Wings · Angharad Matthews. Photo: Jamie Panton."
+      },
+      "meta": "Autumn 2026 · Volcano Theatre",
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "Across the autumn season at Volcano, I designed lighting, sound and video for a changing programme of new performance. Each collaboration called for a different relationship between the performer, the room, the image and the sound.",
+            "My work brought the three design disciplines together, responding to each artist’s language and the practical demands of presenting new work week by week."
+          ]
+        },
+        {
+          "type": "show",
+          "title": "Window Cleaner of the Apocalypse",
+          "artist": "Tiago Gambogi",
+          "dates": "24–26 September 2026",
+          "description": "After the end of the world, a migrant cleaner continues tending the gallery windows. Cleaning tools, samba and stubborn optimism become a way of caring for beauty amid devastation, bringing an ordinary working routine into an extraordinary future.",
+          "images": [
+            {
+              "kind": "image",
+              "src": "assets/new/shape/tiago1.jpg",
+              "alt": "Tiago Gambogi reaching towards a light among ladders",
+              "caption": "Window Cleaner of the Apocalypse · Tiago Gambogi. Photo: Claudine Conway."
+            },
+            {
+              "kind": "image",
+              "src": "assets/new/shape/tiago2.jpg",
+              "alt": "Tiago Gambogi suspended upside down from a pole in magenta and blue light",
+              "caption": "Window Cleaner of the Apocalypse · Tiago Gambogi. Photo: Claudine Conway."
+            }
+          ]
+        },
+        {
+          "type": "show",
+          "title": "Tocyn Iaith",
+          "artist": "Rufus Mufasa",
+          "dates": "1–3 October 2026",
+          "description": "A bilingual performance set in a future Wales where institutions control who can use Welsh. A valid token is required to speak it, placing the language within a bureaucratic system and raising questions about its ownership by communities.",
+          "images": [
+            {
+              "kind": "image",
+              "src": "assets/new/shape/rufus1.jpg",
+              "alt": "Rufus Mufasa performing Tocyn Iaith",
+              "caption": "Tocyn Iaith · Rufus Mufasa. Photo: Hannah Jones."
+            },
+            {
+              "kind": "image",
+              "src": "assets/new/shape/rufus2.jpg",
+              "alt": "Rufus Mufasa seated on cushions with an audience close behind",
+              "caption": "Tocyn Iaith · Rufus Mufasa. Photo: Hannah Jones."
+            }
+          ]
+        },
+        {
+          "type": "show",
+          "title": "Monday Morning at Machine Mart",
+          "artist": "Sahana Athreya",
+          "dates": "15–17 October 2026",
+          "description": "Inspired by an encounter in a Cardiff gadget shop, the performance follows everyday life on the high street. Exchanges around inexpensive consumer goods become a way to examine the relationships between migration, the economy and a changing climate.",
+          "images": [
+            {
+              "kind": "image",
+              "src": "assets/new/shape/sahana1.jpg",
+              "alt": "Sahana Athreya performing Monday Morning at Machine Mart",
+              "caption": "Monday Morning at Machine Mart · Sahana Athreya. Photo: Claudine Conway."
+            },
+            {
+              "kind": "image",
+              "src": "assets/new/shape/sahana2.jpg",
+              "alt": "Sahana Athreya standing beside a bicycle in a small shop setting",
+              "caption": "Monday Morning at Machine Mart · Sahana Athreya. Photo: Claudine Conway."
+            }
+          ]
+        },
+        {
+          "type": "show",
+          "title": "The Last Place Left",
+          "artist": "Georgia Griffiths",
+          "dates": "22–24 October 2026",
+          "description": "In a near future where friendship is sold through subscriptions and attention has become a commodity, a small group enters an underground archive. It holds traces of human connection as the communities outside it begin to disappear.",
+          "images": [
+            {
+              "kind": "image",
+              "src": "assets/new/shape/georgia-show1.jpg",
+              "alt": "Performer gesturing across a table with a teapot and packets of biscuits, surrounded by newspapers under violet light.",
+              "caption": "The Last Place Left · Georgia Griffiths. Photo: Jamie Panton."
+            },
+            {
+              "kind": "image",
+              "src": "assets/new/shape/georgia-show2.jpg",
+              "alt": "Performer seated at a typewriter among books and props while an interior is projected across the set.",
+              "caption": "The Last Place Left · Georgia Griffiths. Photo: Jamie Panton."
+            }
+          ]
+        },
+        {
+          "type": "show",
+          "title": "If You Had Wings",
+          "artist": "Angharad Matthews",
+          "dates": "29–31 October 2026",
+          "description": "Inspired by Wim Wenders’s Wings of Desire, an angel returns to a future high street devastated by war. Once a listener and comforter to its residents, she searches for human connection and the possibility of helping to build a more peaceful future.",
+          "images": [
+            {
+              "kind": "image",
+              "src": "assets/new/shape/angharad1.jpg",
+              "alt": "Performer in a pale winged costume and white sunglasses, with a red tie, under blue stage light.",
+              "caption": "If You Had Wings · Angharad Matthews. Photo: Jamie Panton."
+            },
+            {
+              "kind": "image",
+              "src": "assets/new/shape/angharad2.jpg",
+              "alt": "Performer in a pale winged costume kneeling beside a suitcase and holding a red object against a projected backdrop.",
+              "caption": "If You Had Wings · Angharad Matthews. Photo: Jamie Panton."
+            }
+          ]
+        }
+      ],
+      "home_image_credit": "Photograph: Jamie Panton"
+    },
+    {
+      "slug": "maybe-its-summer-now",
+      "title": "efallai ei bod hi’n haf nawr",
+      "subtitle": "maybe it’s summer now",
+      "year": "2026",
+      "category": "Moving image",
+      "role": "Artist",
+      "summary": "A single-channel video work with stereo sound.",
+      "cover": {
+        "src": "assets/video/posters/summer.jpg",
+        "alt": "Still from efallai ei bod hi’n haf nawr / maybe it’s summer now"
+      },
+      "meta": "Single-channel video · Stereo audio",
+      "blocks": [
+        {
+          "type": "media",
+          "item": {
+            "kind": "video",
+            "src": "assets/video/summer.mp4",
+            "poster": "assets/video/posters/summer.jpg",
+            "title": "efallai ei bod hi'n haf nawr",
+            "caption": "efallai ei bod hi'n haf nawr / maybe it's summer now. Single-channel video, stereo audio. 2026."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "what-the-fuck-is-going-on",
+      "title": "what the fuck is going on? (or how I see things)",
+      "year": "2025",
+      "category": "Performance",
+      "role": "Writer, performer, composer & video designer",
+      "venue": "Volcano Theatre, Abertawe",
+      "summary": "An authored solo performance bringing together projection, sound, satire and research into artificial intelligence and its social implications.",
+      "cover": {
+        "src": "assets/Theatre/wtfigo1.jpeg",
+        "alt": "Production photograph of what the fuck is going on? (or how I see things)"
+      },
+      "meta": "Commissioned by Volcano · The Shape of Things to Come · 29–31 May 2025",
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "I wrote, performed, scored and designed this solo work for Volcano Theatre. Projection, music, live performance and satire formed a response to artificial intelligence and its social implications, approached from a working-class perspective.",
+            "The commission brought writing, performance, composition and visual design into one work. It was presented as part of The Shape of Things to Come in May 2025."
+          ]
+        },
+        {
+          "type": "score",
+          "description": "The music I made for the show, released as proxydite.",
+          "url": "https://proxydite.bandcamp.com/album/what-the-fuck-is-going-on-or-how-i-see-things",
+          "album_id": "1514763297"
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "src": "assets/Theatre/wtfigo1.jpeg",
+            "alt": "Production photograph of what the fuck is going on? (or how I see things)",
+            "natural": true
+          }
+        },
+        {
+          "type": "grid",
+          "cols": 2,
+          "items": [
+            {
+              "kind": "image",
+              "src": "assets/Theatre/wtfigo2.jpeg",
+              "alt": "what the fuck is going on? production still with projected face",
+              "ratio": "r169"
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Read the original programme",
+              "url": "https://volcanotheatre.wales/shape25/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "studies-for-a-loving-machine",
+      "title": "Studies for a Loving Machine",
+      "year": "2025–ongoing",
+      "category": "Installation",
+      "role": "Artist",
+      "summary": "An ongoing body of work exploring how energy, data, infrastructure and other systems become part of everyday experience.",
+      "cover": {
+        "src": "assets/Art/Studies for a Loving Machine/SFaLM.jpg",
+        "alt": "Diagram on orange fabric: System and Behaviour connected by a waveform"
+      },
+      "meta": "Moving image · Installation · Sound · Ongoing",
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "Studies for a Loving Machine explores the systems that organise everyday life and how they are experienced through particular places. Moving image, sound, objects and live data offer different ways to encounter processes that are often difficult to see."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "5th World Congress of Psychogeography"
+        },
+        {
+          "type": "paras",
+          "items": [
+            "In September 2026, I presented work from the project and gave a talk at the 5th World Congress of Psychogeography in Swansea. The installation brought together a CRT television showing a live feed of Kilvey Hill, a composited layer of abstracted geospatial data, and sail-like forms moving in response to live weather data."
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Recorded talk — 5th World Congress of Psychogeography, September 2026",
+              "url": "https://www.youtube.com/watch?v=qxjMMxJeJgw&t=41s"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Development studies"
+        },
+        {
+          "type": "grid",
+          "cols": 2,
+          "items": [
+            {
+              "kind": "image",
+              "src": "assets/Art/Studies for a Loving Machine/rocks.png",
+              "alt": "Diagram: rocks",
+              "ratio": "r54"
+            },
+            {
+              "kind": "image",
+              "src": "assets/Art/Studies for a Loving Machine/systems.png",
+              "alt": "Diagram: systems",
+              "ratio": "r54"
+            }
+          ]
+        },
+        {
+          "type": "grid",
+          "cols": 3,
+          "items": [
+            {
+              "kind": "video",
+              "src": "assets/video/SFaLM_05_1.mp4",
+              "poster": "assets/video/posters/SFaLM_05_1.jpg",
+              "title": "Study 0.5"
+            },
+            {
+              "kind": "video",
+              "src": "assets/video/SFaLM_05_2.mp4",
+              "poster": "assets/video/posters/SFaLM_05_2.jpg",
+              "title": "Study 0.5"
+            },
+            {
+              "kind": "video",
+              "src": "assets/video/SFaLM_05_3.mp4",
+              "poster": "assets/video/posters/SFaLM_05_3.jpg",
+              "title": "Study 0.5"
+            }
+          ]
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "src": "assets/Art/Studies for a Loving Machine/StudiesTV.jpeg",
+            "alt": "Studies TV",
+            "natural": true
+          }
+        },
+        {
+          "type": "heading",
+          "text": "Grid Pulse"
+        },
+        {
+          "type": "paras",
+          "items": [
+            "A browser-based sound instrument developed as part of the wider project. Grid Pulse uses electrical grid frequency, regional carbon-intensity data and the location of electrical infrastructure as material for sound."
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Open Grid Pulse",
+              "url": "https://grid-pulse.github-02d.workers.dev/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "jane-eyre",
+      "title": "Jane Eyre: A Musical",
+      "year": "2026",
+      "category": "Theatre",
+      "role": "Associate video design & programming",
+      "venue": "Southwark Playhouse Elephant",
+      "summary": "Associate video design and programming for the musical at Southwark Playhouse Elephant.",
+      "cover": {
+        "src": "assets/new/jane/jane-24.jpg",
+        "alt": "Production photograph of Jane Eyre: A Musical"
+      },
+      "meta": "28 August–24 October 2026 · Programme credit: Video Associate / Programmer",
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "Charlotte Brontë’s novel becomes a musical about love, independence and the consequences of concealed truths. Jane arrives at Thornfield Hall as a governess and forms an attachment to Edward Rochester, but what she discovers there challenges the future she wants for herself. Written by John Caird and Paul Gordon, this UK premiere was co-directed by Caird and Megan McGinnis at Southwark Playhouse Elephant."
+          ]
+        },
+        {
+          "type": "reel",
+          "title": "Video design reel",
+          "description": "A minute of the video work behind the show.",
+          "item": {
+            "kind": "video",
+            "src": "assets/video/jane-eyre-video-design-reel.mp4",
+            "poster": "assets/video/posters/jane-eyre-video-design-reel.jpg",
+            "title": "Jane Eyre — video design reel",
+            "caption": "Extended reel · 1 min · silent",
+            "orientation": "portrait"
+          }
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "src": "assets/new/jane/jane-24.jpg",
+            "alt": "Production photograph of Jane Eyre: A Musical",
+            "natural": true
+          }
+        },
+        {
+          "type": "grid",
+          "cols": 2,
+          "items": [
+            {
+              "kind": "image",
+              "src": "assets/new/jane/jane-3.jpg",
+              "alt": "Production photograph of Jane Eyre: A Musical",
+              "ratio": "r169"
+            },
+            {
+              "kind": "image",
+              "src": "assets/new/jane/jane-14.jpg",
+              "alt": "Production photograph of Jane Eyre: A Musical",
+              "ratio": "r169"
+            }
+          ]
+        },
+        {
+          "type": "credit",
+          "text": "Photography: Victoria Davies."
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Production information and credits",
+              "url": "https://southwarkplayhouse.co.uk/productions/jane-eyre/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "opera-prelude",
+      "title": "Trouble in Tahiti / The Seven Deadly Sins",
+      "year": "2026",
+      "category": "Theatre",
+      "role": "Video designer",
+      "venue": "Opera Holland Park",
+      "summary": "Video design for Opera Prelude’s double bill at Opera Holland Park.",
+      "cover": {
+        "src": "assets/new/opera/opera1.jpg",
+        "alt": "Production photograph from Opera Prelude’s double bill"
+      },
+      "meta": "Opera Prelude · August 2026",
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "Video design for Opera Prelude’s double bill of Trouble in Tahiti and The Seven Deadly Sins, presented at Opera Holland Park in August 2026."
+          ]
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "src": "assets/new/opera/opera1.jpg",
+            "alt": "Production photograph from Opera Prelude’s Trouble in Tahiti / The Seven Deadly Sins",
+            "natural": true
+          }
+        },
+        {
+          "type": "credit",
+          "text": "Photography © Julian Guidera."
+        }
+      ]
+    },
+    {
+      "slug": "painting",
+      "title": "Painting",
+      "year": "2025–2026",
+      "category": "Painting",
+      "role": "Artist",
+      "summary": "Selected paintings and mixed-media work in acrylic, clay and chalk.",
+      "cover": {
+        "src": "assets/Art/Y Cynfod/proofofexistence.jpg",
+        "alt": "Proof of Existence, acrylic and clay on canvas"
+      },
+      "blocks": [
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "natural": true,
+            "src": "assets/Art/Y Cynfod/proofofexistence.jpg",
+            "alt": "Proof of Existence, acrylic and clay on canvas",
+            "caption": "Proof of Existence. 32 × 40 in. Acrylic and clay on canvas. 2026."
+          }
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "natural": true,
+            "src": "assets/Art/Painting/instructionsforcontainment.jpeg",
+            "alt": "Instructions for Containment, acrylic on canvas",
+            "caption": "Instructions for Containment. 18 × 24 in. Acrylic on canvas. 2026."
+          }
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "natural": true,
+            "src": "assets/Art/Painting/hebetudeinorange.jpeg",
+            "alt": "hebetude in orange, acrylic on canvas",
+            "caption": "hebetude in orange. 9 × 12 in. Acrylic on canvas. 2026."
+          }
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "natural": true,
+            "src": "assets/Art/Painting/halfwaytonowhere.jpeg",
+            "alt": "halfway to nowhere, acrylic on canvas",
+            "caption": "halfway to nowhere. 9 × 12 in. Acrylic on canvas. 2025."
+          }
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "natural": true,
+            "src": "assets/Art/Painting/therightplace.jpeg",
+            "alt": "the right place, acrylic and chalk on paper",
+            "caption": "the right place. Acrylic and chalk on paper. 2025."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "digital-work",
+      "title": "Digital art",
+      "year": "Selected work",
+      "category": "Digital art",
+      "role": "Artist",
+      "summary": "Selected digital images and compositions.",
+      "cover": {
+        "src": "assets/Art/Digital Art/medusa.jpg",
+        "alt": "medusa, digital work"
+      },
+      "blocks": [
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "natural": true,
+            "src": "assets/Art/Digital Art/medusa.jpg",
+            "alt": "medusa, digital work",
+            "caption": "medusa."
+          }
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "natural": true,
+            "src": "assets/Art/Digital Art/thekiss.jpg",
+            "alt": "the kiss, digital work",
+            "caption": "the kiss."
+          }
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "natural": true,
+            "src": "assets/Art/Digital Art/beginning.jpg",
+            "alt": "beginning, digital work",
+            "caption": "beginning."
+          }
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "natural": true,
+            "src": "assets/Art/Digital Art/untitledflowers.jpg",
+            "alt": "untitled flowers, digital work",
+            "caption": "untitled flowers."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "moving-image",
+      "title": "Moving image",
+      "year": "Selected work",
+      "category": "Moving image",
+      "role": "Artist",
+      "summary": "Selected video works, animations and experiments with image and sound.",
+      "cover": {
+        "src": "assets/video/posters/body.png",
+        "alt": "Still from body"
+      },
+      "blocks": [
+        {
+          "type": "media",
+          "item": {
+            "kind": "video",
+            "src": "assets/video/body.mp4",
+            "poster": "assets/video/posters/body.png",
+            "title": "body",
+            "caption": "body."
+          }
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "video",
+            "src": "assets/video/bloom.mp4",
+            "poster": "assets/video/posters/bloom.jpg",
+            "title": "bloom",
+            "caption": "bloom."
+          }
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "vimeo",
+            "vimeoId": "713729049",
+            "title": "Kandinsky Drawing",
+            "caption": "Kandinsky Drawing."
+          }
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "vimeo",
+            "vimeoId": "974556495",
+            "title": "sandy tides",
+            "caption": "sandy tides."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "volcano-telephone-booths",
+      "title": "Volcano Telephone Booths",
+      "year": "Selected work",
+      "category": "Creative technology",
+      "role": "Creative technologist",
+      "venue": "Volcano Theatre",
+      "summary": "A networked audio system connecting a tin-can telephone to digital communication tools.",
+      "cover": {
+        "src": "assets/Creative Technology/Volcano Telephone Booth/telephone-booth-use.jpg",
+        "alt": "Visitor using a tin-can telephone inside a yellow telephone booth"
+      },
+      "meta": "Creative technology · Interactive audio system · Volcano Theatre",
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "A networked audio system connecting a tin-can contact microphone and telephone booth through a Focusrite interface, ThinkPad and Discord. The installation combined an intentionally simple physical interface with contemporary networked communication technology."
+          ]
+        },
+        {
+          "type": "grid",
+          "cols": 2,
+          "items": [
+            {
+              "kind": "image",
+              "src": "assets/Creative Technology/Volcano Telephone Booth/telephone-booth-interior.jpeg",
+              "alt": "Tin-can telephone and contact microphone installed inside the yellow telephone booth",
+              "ratio": "r43"
+            },
+            {
+              "kind": "image",
+              "src": "assets/Creative Technology/Volcano Telephone Booth/telephone-booth-use.jpg",
+              "alt": "Visitor using the tin-can telephone inside the yellow telephone booth",
+              "ratio": "r43"
+            }
+          ]
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "src": "assets/Creative Technology/Volcano Telephone Booth/volcano-system.svg",
+            "alt": "System diagram: contact microphone on tin can into Focusrite audio interface; bidirectional audio connection to ThinkPad X270 running Discord; Focusrite output to soundbar in the telephone booth.",
+            "natural": true,
+            "caption": "System diagram."
+          }
+        }
+      ]
+    },
+    {
+      "slug": "theatr-iolo",
+      "title": "Theatr Iolo R&D",
+      "year": "2026",
+      "category": "Creative technology",
+      "role": "Creative technologist",
+      "venue": "Theatr Iolo",
+      "summary": "Research into RFID and NFC as part of production and video design.",
+      "cover": {
+        "src": "assets/Creative Technology/CO2 Yellow R&D/co2-yellow-rd-notes.jpg",
+        "alt": "Participants discussing handwritten R&D notes"
+      },
+      "meta": "July 2026 · Research and development",
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "Creative technology R&D for Theatr Iolo exploring the integration of RFID and NFC technology into production and video design."
+          ]
+        },
+        {
+          "type": "grid",
+          "cols": 3,
+          "items": [
+            {
+              "kind": "image",
+              "src": "assets/Creative Technology/CO2 Yellow R&D/co2-yellow-rd-workshop.jpg",
+              "alt": "Participants gathered around a table during an R&D workshop",
+              "ratio": "r43"
+            },
+            {
+              "kind": "image",
+              "src": "assets/Creative Technology/CO2 Yellow R&D/co2-yellow-rd-notes.jpg",
+              "alt": "Participants discussing handwritten R&D notes",
+              "ratio": "r43"
+            },
+            {
+              "kind": "image",
+              "src": "assets/Creative Technology/CO2 Yellow R&D/co2-yellow-rd-prototype.jpg",
+              "alt": "Prototype technology in use during R&D",
+              "ratio": "r43"
+            }
+          ]
+        },
+        {
+          "type": "credit",
+          "text": "Photography: Theatr Iolo."
+        }
+      ]
+    },
+    {
+      "slug": "rhyddid",
+      "title": "Rhyddid",
+      "year": "2021",
+      "category": "Installation",
+      "role": "Artist",
+      "venue": "Guildhall School of Music & Drama, London",
+      "summary": "An interactive installation connecting a suspended wooden map of Wales with projected histories, original music and audience participation.",
+      "cover": {
+        "src": "assets/Installation/rhyddid.jpg",
+        "alt": "Rhyddid installation with audience facing a projected image"
+      },
+      "meta": "2021 · Interactive projection installation · Guildhall School of Music & Drama, London",
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "An interactive projection installation combining a suspended wooden map of Wales with fragments of Welsh history. Audience interaction influenced the material encountered, bringing physical structure, projection and participation into a shared spatial experience."
+          ]
+        },
+        {
+          "type": "grid",
+          "cols": 3,
+          "items": [
+            {
+              "kind": "image",
+              "src": "assets/Installation/rhyddid.jpg",
+              "alt": "Audience facing the Rhyddid installation",
+              "ratio": "r43"
+            },
+            {
+              "kind": "image",
+              "src": "assets/Installation/Rhyddid/cutting2.jpg",
+              "alt": "Rhyddid fabrication drawing over plywood in the workshop",
+              "ratio": "r43"
+            },
+            {
+              "kind": "image",
+              "src": "assets/Installation/Rhyddid/previs2.jpg",
+              "alt": "Rhyddid previsualisation of projected form",
+              "ratio": "r43"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "simul",
+      "title": "SIMUL",
+      "year": "2022",
+      "category": "Installation",
+      "role": "Artist",
+      "venue": "Guildhall School of Music & Drama, London",
+      "summary": "An immersive virtual-reality experience exploring calm, presence and user input.",
+      "cover": {
+        "src": "assets/Installation/SIMUL/simul1.jpg",
+        "alt": "Participant using a VR headset for SIMUL"
+      },
+      "meta": "2022 · Virtual reality experience · Guildhall School of Music & Drama, London",
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "An immersive virtual reality experience exploring calm, presence and user input through a responsive digital environment."
+          ]
+        },
+        {
+          "type": "grid",
+          "cols": 3,
+          "items": [
+            {
+              "kind": "image",
+              "src": "assets/Installation/SIMUL/simul1.jpg",
+              "alt": "Participant using a VR headset for SIMUL",
+              "ratio": "r43"
+            },
+            {
+              "kind": "image",
+              "src": "assets/Installation/SIMUL/simul4.jpg",
+              "alt": "Virtual landscape from the SIMUL VR experience",
+              "ratio": "r43"
+            },
+            {
+              "kind": "image",
+              "src": "assets/Installation/SIMUL/simul6.jpg",
+              "alt": "SIMUL virtual environment shown on a laptop",
+              "ratio": "r43"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ble-mae-fy-nghartref",
+      "title": "Ble Mae Fy Nghartref",
+      "year": "2026",
+      "category": "Theatre",
+      "role": "Sound, lighting & AV design",
+      "venue": "Volcano Theatre",
+      "summary": "Sound, lighting and audiovisual design for Eric Ngalle Charles and Volcano’s collaboration.",
+      "cover": {
+        "src": "assets/Theatre/BMFN.jpg",
+        "alt": "Production photograph of Ble Mae Fy Nghartref"
+      },
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "Ble Mae Fy Nghartref (Where is My Home?) brings Eric Ngalle Charles’s lived experience into a collaboration with Volcano, adapted and directed by Paul Davies. Two racist incidents become the starting point for exploring identity, belonging and the meaning of home through stories and memories. Developed with Arts Council of Wales support in April 2026, the project was shared with audiences in Swansea through two work-in-progress performances on 24 and 25 April."
+          ]
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "src": "assets/Theatre/BMFN.jpg",
+            "alt": "Production photograph of Ble Mae Fy Nghartref",
+            "natural": true
+          }
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Production information",
+              "url": "https://volcanotheatre.wales/bmfn/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "silent-night-raging-eve",
+      "title": "Silent Night, Raging Eve",
+      "year": "2025",
+      "category": "Theatre",
+      "role": "Lighting & video design",
+      "venue": "Volcano Theatre",
+      "summary": "Lighting and video design for Silent Night, Raging Eve at Volcano Theatre.",
+      "cover": {
+        "src": "assets/Theatre/snre.JPG",
+        "alt": "Production photograph of Silent Night, Raging Eve"
+      },
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "Lighting and video design for Silent Night, Raging Eve at Volcano Theatre."
+          ]
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "src": "assets/Theatre/snre.JPG",
+            "alt": "Production photograph of Silent Night, Raging Eve",
+            "natural": true
+          }
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Production information",
+              "url": "https://volcanotheatre.wales/silent-night-raging-eve/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "the-hunger-games-on-stage",
+      "title": "The Hunger Games On Stage",
+      "year": "2025",
+      "category": "Theatre",
+      "role": "Animator",
+      "venue": "Troubadour Theatre, Canary Wharf",
+      "summary": "Animator for screen content, working for Video Designer Tal Rosner.",
+      "cover": {
+        "src": "assets/Theatre/hungergames.jpg",
+        "alt": "Production photograph of The Hunger Games On Stage"
+      },
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "Animator for screen content, working for Video Designer Tal Rosner."
+          ]
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "src": "assets/Theatre/hungergames.jpg",
+            "alt": "Production photograph of The Hunger Games On Stage",
+            "natural": true
+          }
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Production information",
+              "url": "https://thehungergamesonstage.com"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "you-know-my-mum",
+      "title": "You Know My Mum",
+      "year": "2025",
+      "category": "Theatre",
+      "role": "Associate Video Designer",
+      "venue": "Belgrade Theatre, Coventry & National Tour",
+      "summary": "Working for Video Designer Hayley Egan.",
+      "cover": {
+        "src": "assets/Theatre/ykmm.jpg",
+        "alt": "Production photograph of You Know My Mum"
+      },
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "Working for Video Designer Hayley Egan."
+          ]
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "src": "assets/Theatre/ykmm.jpg",
+            "alt": "Production photograph of You Know My Mum",
+            "natural": true
+          }
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Production information",
+              "url": "https://www.belgrade.co.uk/events/you-know-my-mum/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "iphigenia-yn-sblot",
+      "title": "Iphigenia Yn Sblot",
+      "year": "2024",
+      "category": "Theatre",
+      "role": "Video Designer",
+      "venue": "Sherman Theatre",
+      "summary": "Welsh language premiere.",
+      "cover": {
+        "src": "assets/Theatre/iphigenia.jpg",
+        "alt": "Production photograph of Iphigenia Yn Sblot"
+      },
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "Welsh language premiere."
+          ]
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "src": "assets/Theatre/iphigenia.jpg",
+            "alt": "Production photograph of Iphigenia Yn Sblot",
+            "natural": true
+          }
+        },
+        {
+          "type": "grid",
+          "cols": 2,
+          "items": [
+            {
+              "kind": "image",
+              "src": "assets/Theatre/iphigenia/iphigenia4.jpg",
+              "alt": "Iphigenia Yn Sblot production still: performer seated beside a mattress and chair",
+              "ratio": "r169"
+            },
+            {
+              "kind": "image",
+              "src": "assets/Theatre/iphigenia/iphigenia5.jpg",
+              "alt": "Iphigenia Yn Sblot production still: performer in projected light",
+              "ratio": "r169"
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Production information",
+              "url": "https://www.shermantheatre.co.uk/event/iphigenia-yn-sblot/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "opera-triple-bill",
+      "title": "Opera Triple Bill",
+      "year": "2022",
+      "category": "Theatre",
+      "role": "Video Designer",
+      "venue": "Silk Street Theatre",
+      "summary": "Guildhall School's Opera department presented works by Massenet, Smyth and Rota in a triple bill exploring love and identity. Ryan Samuel Davies was Video Designer.",
+      "cover": {
+        "src": "assets/Theatre/opera.jpg",
+        "alt": "Production photograph of Opera Triple Bill"
+      },
+      "blocks": [
+        {
+          "type": "paras",
+          "items": [
+            "Guildhall School's Opera department presented works by Massenet, Smyth and Rota in a triple bill exploring love and identity. Ryan Samuel Davies was Video Designer."
+          ]
+        },
+        {
+          "type": "media",
+          "item": {
+            "kind": "image",
+            "src": "assets/Theatre/opera.jpg",
+            "alt": "Production photograph of Opera Triple Bill",
+            "natural": true
+          }
+        },
+        {
+          "type": "grid",
+          "cols": 2,
+          "items": [
+            {
+              "kind": "image",
+              "src": "assets/Theatre/guildhallopera/opera3.jpeg",
+              "alt": "Opera Triple Bill production still with projected clown image",
+              "ratio": "r169"
+            },
+            {
+              "kind": "image",
+              "src": "assets/Theatre/guildhallopera/opera4.jpeg",
+              "alt": "Opera Triple Bill production still at La Scala Picturehouse",
+              "ratio": "r169"
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "Production information",
+              "url": "https://www.gsmd.ac.uk/opera-triple-bill-november-2022"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "moving-screens",
+      "title": "Moving Screens",
+      "year": "2023",
+      "category": "Installation",
+      "role": "Artist",
+      "summary": "Documentation of Moving Screens, an installation from 2023.",
+      "blocks": [
+        {
+          "type": "media",
+          "item": {
+            "kind": "vimeo",
+            "vimeoId": "1035620136",
+            "title": "Moving Screens 2023",
+            "caption": "Moving Screens. 2023."
+          }
+        }
+      ]
+    }
+  ],
+  "editorial": {
+    "homepageLead": "Welsh artist and creative technologist, based in Abertawe (Swansea). Working across moving image, sound, light, installation, performance and writing.",
+    "writingIntro": "Writing moves through my work as stories, poems, performance texts and talks. Here are texts to read and recordings to return to.",
+    "about": [
+      "I’m a Welsh artist from Llanelli, based in Abertawe (Swansea). I make moving images, installations, performances, music and writing, and design light, sound and video for theatre.",
+      "I’m interested in how images, sounds and objects shape our experience of a place, and how physical and digital acts of making affect one another. Those questions connect the clay figures and projected doubles of Y Cynfod, my solo performance what the fuck is going on? (or how I see things), and works that respond to the systems around us.",
+      "My practice began in youth theatre and arts organising in Llanelli, before developing through community filmmaking and training in video design at Guildhall. I now work across independent projects and collaborations, bringing artistic decisions and the practical work of making them happen into the same process.",
+      "Writing and performance are increasingly central to that work. I’m developing longer projects that bring image, sound, light, objects and language together, while continuing to collaborate with artists and theatre companies. I also share code, methods and documentation where practical."
+    ],
+    "credits": [
+      {
+        "role": "Writer, performer, composer & video designer",
+        "items": [
+          {
+            "title": "what the fuck is going on? (or how I see things)",
+            "url": "work/what-the-fuck-is-going-on/",
+            "context": "Volcano Theatre · 2025"
+          }
+        ]
+      },
+      {
+        "role": "Lighting, sound & video designer",
+        "items": [
+          {
+            "title": "The Shape of Things to Come",
+            "url": "work/shape-of-things-to-come-2026/",
+            "context": "Volcano Theatre · Autumn 2026"
+          }
+        ]
+      },
+      {
+        "role": "Sound, lighting & AV designer",
+        "items": [
+          {
+            "title": "Ble Mae Fy Nghartref",
+            "url": "https://volcanotheatre.wales/bmfn/",
+            "context": "Volcano Theatre · 2026"
+          }
+        ]
+      },
+      {
+        "role": "Lighting & video designer",
+        "items": [
+          {
+            "title": "Silent Night, Raging Eve",
+            "url": "https://volcanotheatre.wales/silent-night-raging-eve/",
+            "context": "Volcano Theatre · 2025"
+          }
+        ]
+      },
+      {
+        "role": "Associate video design & programming",
+        "items": [
+          {
+            "title": "Jane Eyre: A Musical",
+            "url": "https://southwarkplayhouse.co.uk/productions/jane-eyre/",
+            "context": "Southwark Playhouse Elephant · 2026 · Programme credit: Video Associate / Programmer"
+          }
+        ]
+      },
+      {
+        "role": "Video Designer",
+        "items": [
+          {
+            "title": "Trouble in Tahiti / The Seven Deadly Sins",
+            "url": "work/opera-prelude/",
+            "context": "Opera Prelude · Opera Holland Park · 2026"
+          },
+          {
+            "title": "Reykjavik",
+            "url": "https://www.hampsteadtheatre.co.uk/whats-on/reykjavik/",
+            "context": "Hampstead Theatre"
+          },
+          {
+            "title": "Iphigenia Yn Sblot",
+            "url": "https://www.shermantheatre.co.uk/event/iphigenia-yn-sblot/",
+            "context": "Sherman Theatre"
+          },
+          {
+            "title": "Succession Theme is my Ringtone",
+            "url": "https://www.rosetheatre.org/whats-on/succession-theme-is-my-ringtone/",
+            "context": "Rose Theatre Kingston"
+          },
+          {
+            "title": "Invisible Animal",
+            "url": "https://www.omnibus-clapham.org/invisible-animal/",
+            "context": "Omnibus Theatre"
+          },
+          {
+            "title": "Under Milk Wood / Dan y Wenallt",
+            "url": "https://www.shermantheatre.co.uk/event/under-milk-wood-dan-y-wenallt/",
+            "context": "National Youth Arts Wales"
+          },
+          {
+            "title": "The Welsh Lxdies",
+            "url": "https://www.purplestringproductions.com/the-welsh-lxdies",
+            "context": "Purple String Productions"
+          },
+          {
+            "title": "HOT IN HERE",
+            "url": "https://cptheatre.co.uk/show/hot-in-here/",
+            "context": "Camden People's Theatre & Tour"
+          },
+          {
+            "title": "Attempts on Her Life",
+            "url": "https://www.barbican.org.uk/whats-on/2024/event/attempts-on-her-life",
+            "context": "Guildhall School of Music and Drama"
+          },
+          {
+            "title": "Cabaret Boheme",
+            "url": "https://www.thebohemianstheatre.com/cabaret-boheme",
+            "context": "Union Theatre"
+          },
+          {
+            "title": "Macbeth",
+            "url": "https://www.barbican.org.uk/whats-on/2024/event/macbeth",
+            "context": "Guildhall School of Music and Drama"
+          },
+          {
+            "title": "Opera Triple Bill",
+            "url": "https://www.gsmd.ac.uk/opera-triple-bill-november-2022",
+            "context": "Guildhall School of Music and Drama"
+          }
+        ]
+      },
+      {
+        "role": "Associate Video Designer",
+        "items": [
+          {
+            "title": "You Know My Mum",
+            "url": "https://www.belgrade.co.uk/events/you-know-my-mum/",
+            "context": "Video Designer: Hayley Egan"
+          }
+        ]
+      },
+      {
+        "role": "Animator",
+        "items": [
+          {
+            "title": "The Hunger Games on Stage",
+            "url": "https://thehungergamesonstage.com",
+            "context": "Troubadour Theatre, Canary Wharf"
+          }
+        ]
+      },
+      {
+        "role": "Assistant Video Designer",
+        "items": [
+          {
+            "title": "The Lesson",
+            "url": "https://www.icarustheatre.co.uk/the-lesson",
+            "context": "Southwark Playhouse & Tour"
+          }
+        ]
+      },
+      {
+        "role": "Digital Associate",
+        "items": [
+          {
+            "title": "This Incredible Life",
+            "url": "https://www.ambobdim.cymru/en/profile-content/this-incredible-life/",
+            "context": "Canoe Theatre · Digital Production (2020)"
+          }
+        ]
+      },
+      {
+        "role": "Designer",
+        "items": [
+          {
+            "title": "SIMUL",
+            "url": "",
+            "context": "Virtual Reality"
+          }
+        ]
+      },
+      {
+        "role": "Programmer",
+        "items": [
+          {
+            "title": "Scissorhandz",
+            "url": "https://www.scissorhandzthemusical.com",
+            "context": "Musical"
+          }
+        ]
+      },
+      {
+        "role": "Production Video Engineer",
+        "items": [
+          {
+            "title": "Footballers Wives",
+            "url": "https://fwmusical.com",
+            "context": "Musical"
+          },
+          {
+            "title": "Scissorhandz",
+            "url": "https://www.scissorhandzthemusical.com",
+            "context": "Musical"
+          }
+        ]
+      },
+      {
+        "role": "Assistant Director",
+        "items": [
+          {
+            "title": "This Incredible Life",
+            "url": "https://asiw.co.uk/reviews/this-incredible-life-canoe-theatre-theatrau-sir-gar-chapter",
+            "context": "Canoe Theatre · National Tour (2018)"
+          }
+        ]
+      },
+      {
+        "role": "Creative technologist",
+        "items": [
+          {
+            "title": "Theatr Iolo R&D",
+            "url": "work/theatr-iolo/",
+            "context": "RFID and NFC research · July 2026"
+          },
+          {
+            "title": "Volcano Telephone Booths",
+            "url": "work/volcano-telephone-booths/",
+            "context": "Networked audio system · Volcano Theatre"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "homepageLead": "Welsh artist and creative technologist, based in Abertawe (Swansea). Working across moving image, sound, light, installation, performance and writing.",
+  "writingIntro": "Writing moves through my work as stories, poems, performance texts and talks. Here are texts to read and recordings to return to.",
+  "about": [
+    "I’m a Welsh artist from Llanelli, based in Abertawe (Swansea). I make moving images, installations, performances, music and writing, and design light, sound and video for theatre.",
+    "I’m interested in how images, sounds and objects shape our experience of a place, and how physical and digital acts of making affect one another. Those questions connect the clay figures and projected doubles of Y Cynfod, my solo performance what the fuck is going on? (or how I see things), and works that respond to the systems around us.",
+    "My practice began in youth theatre and arts organising in Llanelli, before developing through community filmmaking and training in video design at Guildhall. I now work across independent projects and collaborations, bringing artistic decisions and the practical work of making them happen into the same process.",
+    "Writing and performance are increasingly central to that work. I’m developing longer projects that bring image, sound, light, objects and language together, while continuing to collaborate with artists and theatre companies. I also share code, methods and documentation where practical."
+  ],
+  "credits": [
+    {
+      "role": "Writer, performer, composer & video designer",
+      "items": [
+        {
+          "title": "what the fuck is going on? (or how I see things)",
+          "url": "work/what-the-fuck-is-going-on/",
+          "context": "Volcano Theatre · 2025"
+        }
+      ]
+    },
+    {
+      "role": "Lighting, sound & video designer",
+      "items": [
+        {
+          "title": "The Shape of Things to Come",
+          "url": "work/shape-of-things-to-come-2026/",
+          "context": "Volcano Theatre · Autumn 2026"
+        }
+      ]
+    },
+    {
+      "role": "Sound, lighting & AV designer",
+      "items": [
+        {
+          "title": "Ble Mae Fy Nghartref",
+          "url": "https://volcanotheatre.wales/bmfn/",
+          "context": "Volcano Theatre · 2026"
+        }
+      ]
+    },
+    {
+      "role": "Lighting & video designer",
+      "items": [
+        {
+          "title": "Silent Night, Raging Eve",
+          "url": "https://volcanotheatre.wales/silent-night-raging-eve/",
+          "context": "Volcano Theatre · 2025"
+        }
+      ]
+    },
+    {
+      "role": "Associate video design & programming",
+      "items": [
+        {
+          "title": "Jane Eyre: A Musical",
+          "url": "https://southwarkplayhouse.co.uk/productions/jane-eyre/",
+          "context": "Southwark Playhouse Elephant · 2026 · Programme credit: Video Associate / Programmer"
+        }
+      ]
+    },
+    {
+      "role": "Video Designer",
+      "items": [
+        {
+          "title": "Trouble in Tahiti / The Seven Deadly Sins",
+          "url": "work/opera-prelude/",
+          "context": "Opera Prelude · Opera Holland Park · 2026"
+        },
+        {
+          "title": "Reykjavik",
+          "url": "https://www.hampsteadtheatre.co.uk/whats-on/reykjavik/",
+          "context": "Hampstead Theatre"
+        },
+        {
+          "title": "Iphigenia Yn Sblot",
+          "url": "https://www.shermantheatre.co.uk/event/iphigenia-yn-sblot/",
+          "context": "Sherman Theatre"
+        },
+        {
+          "title": "Succession Theme is my Ringtone",
+          "url": "https://www.rosetheatre.org/whats-on/succession-theme-is-my-ringtone/",
+          "context": "Rose Theatre Kingston"
+        },
+        {
+          "title": "Invisible Animal",
+          "url": "https://www.omnibus-clapham.org/invisible-animal/",
+          "context": "Omnibus Theatre"
+        },
+        {
+          "title": "Under Milk Wood / Dan y Wenallt",
+          "url": "https://www.shermantheatre.co.uk/event/under-milk-wood-dan-y-wenallt/",
+          "context": "National Youth Arts Wales"
+        },
+        {
+          "title": "The Welsh Lxdies",
+          "url": "https://www.purplestringproductions.com/the-welsh-lxdies",
+          "context": "Purple String Productions"
+        },
+        {
+          "title": "HOT IN HERE",
+          "url": "https://cptheatre.co.uk/show/hot-in-here/",
+          "context": "Camden People's Theatre & Tour"
+        },
+        {
+          "title": "Attempts on Her Life",
+          "url": "https://www.barbican.org.uk/whats-on/2024/event/attempts-on-her-life",
+          "context": "Guildhall School of Music and Drama"
+        },
+        {
+          "title": "Cabaret Boheme",
+          "url": "https://www.thebohemianstheatre.com/cabaret-boheme",
+          "context": "Union Theatre"
+        },
+        {
+          "title": "Macbeth",
+          "url": "https://www.barbican.org.uk/whats-on/2024/event/macbeth",
+          "context": "Guildhall School of Music and Drama"
+        },
+        {
+          "title": "Opera Triple Bill",
+          "url": "https://www.gsmd.ac.uk/opera-triple-bill-november-2022",
+          "context": "Guildhall School of Music and Drama"
+        }
+      ]
+    },
+    {
+      "role": "Associate Video Designer",
+      "items": [
+        {
+          "title": "You Know My Mum",
+          "url": "https://www.belgrade.co.uk/events/you-know-my-mum/",
+          "context": "Video Designer: Hayley Egan"
+        }
+      ]
+    },
+    {
+      "role": "Animator",
+      "items": [
+        {
+          "title": "The Hunger Games on Stage",
+          "url": "https://thehungergamesonstage.com",
+          "context": "Troubadour Theatre, Canary Wharf"
+        }
+      ]
+    },
+    {
+      "role": "Assistant Video Designer",
+      "items": [
+        {
+          "title": "The Lesson",
+          "url": "https://www.icarustheatre.co.uk/the-lesson",
+          "context": "Southwark Playhouse & Tour"
+        }
+      ]
+    },
+    {
+      "role": "Digital Associate",
+      "items": [
+        {
+          "title": "This Incredible Life",
+          "url": "https://www.ambobdim.cymru/en/profile-content/this-incredible-life/",
+          "context": "Canoe Theatre · Digital Production (2020)"
+        }
+      ]
+    },
+    {
+      "role": "Designer",
+      "items": [
+        {
+          "title": "SIMUL",
+          "url": "",
+          "context": "Virtual Reality"
+        }
+      ]
+    },
+    {
+      "role": "Programmer",
+      "items": [
+        {
+          "title": "Scissorhandz",
+          "url": "https://www.scissorhandzthemusical.com",
+          "context": "Musical"
+        }
+      ]
+    },
+    {
+      "role": "Production Video Engineer",
+      "items": [
+        {
+          "title": "Footballers Wives",
+          "url": "https://fwmusical.com",
+          "context": "Musical"
+        },
+        {
+          "title": "Scissorhandz",
+          "url": "https://www.scissorhandzthemusical.com",
+          "context": "Musical"
+        }
+      ]
+    },
+    {
+      "role": "Assistant Director",
+      "items": [
+        {
+          "title": "This Incredible Life",
+          "url": "https://asiw.co.uk/reviews/this-incredible-life-canoe-theatre-theatrau-sir-gar-chapter",
+          "context": "Canoe Theatre · National Tour (2018)"
+        }
+      ]
+    },
+    {
+      "role": "Creative technologist",
+      "items": [
+        {
+          "title": "Theatr Iolo R&D",
+          "url": "work/theatr-iolo/",
+          "context": "RFID and NFC research · July 2026"
+        },
+        {
+          "title": "Volcano Telephone Booths",
+          "url": "work/volcano-telephone-booths/",
+          "context": "Networked audio system · Volcano Theatre"
+        }
+      ]
+    }
+  ]
+}
